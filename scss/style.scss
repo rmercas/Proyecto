@@ -1,0 +1,1513 @@
+
+
+
+
+
+
+/*Variables*/
+$ColorUno: #C70039;
+$ColorDos:  rgb(253, 33, 70);
+$ColorTres: #a00531;
+$xboxcolor: rgb(0, 180, 0);
+
+* > html{
+    padding: 0%;
+    margin: 0%;
+    
+}
+
+* > body{
+   
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f4f4;
+    
+
+}
+
+#header{
+     width: 100%;
+     border: none;
+     background-color: $ColorUno;
+   
+}
+
+.nav_menu{
+    border: none;
+    
+    
+}
+
+.nav_menu:hover {
+    
+    
+    background-color: $ColorTres;
+}
+
+
+.banner{
+    border: none;
+    width: 100%;
+    height: 600px;
+}
+
+.carousel-inner {
+    height: 600px;
+}
+
+#carouselExampleCaptions > * > div {
+ height: 600px;  
+
+}
+
+.menu{
+    border: none;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+      
+}
+
+.lista{
+    border: none;
+    display: flex;
+    flex-direction:row;
+    list-style-type: none ;
+    width: 48%;
+    height: 70px;
+    
+}
+
+
+.menu > .lista > li{
+    padding: 20px;
+    height: 70px;
+    
+}
+
+.menu > .lista > li > a {
+    color: aliceblue;
+    
+    border: none;
+    
+}
+
+
+.menu > .lista2 > li > a {
+    color: aliceblue;
+    
+}
+
+
+
+.lista2{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    list-style-type: none;
+    height: 70px;
+    padding-top: 12px;
+    padding-left: 10px;
+    
+}
+
+.menu > .lista2 > li{
+    padding: 7px;
+}
+
+
+#horario{
+
+    color: rgb(253, 33, 70);
+}
+
+
+/* títulos aquí */ 
+
+@mixin condicional ($titulo) {
+    font-weight: ($titulo);
+
+    @if $titulo == green {
+        text-align: center;
+        font-weight: bolder;
+        color: $xboxcolor
+        
+    } @else if $titulo == blue {
+        text-align: center;
+        font-weight: bolder;
+        
+        color: blue;
+    } 
+    
+    @else if $titulo == red {
+        font-weight: bolder;
+        text-align: center;
+        font-weight: bolder;
+        color: $ColorTres;
+
+        
+    }
+
+    @else {
+        font-weight: bolder;
+        text-align: center;
+        font-weight: bolder;
+        color: rgb(80, 79, 79);
+        
+    }
+    
+}
+
+.titulonin {
+    @include condicional(red)
+}
+
+.tituloexb {
+    @include condicional(green)
+}
+
+.titulopla {
+
+    @include condicional(blue)
+}
+
+
+.tituloacc {
+
+    @include condicional(yellow)
+}
+
+.titulo_index {
+    @include condicional(yellow)
+}
+
+
+
+
+
+
+/* aquí empieza la hoja de estilo de la página index */ 
+
+
+
+.gridindex{
+
+    display: grid;
+    height: 100vh;
+    grid-gap: 20px;
+    
+    
+    justify-content: center;
+
+
+    grid-template-areas: 
+    "cuad1 cuad2 cuad3"
+    "cuad4 cuad5 cuad3"
+    "cuad6 cuad7 cuad8";
+
+    grid-template-columns: 250px 250px 600px;
+    grid-template-rows: 250px 250px 250px;
+}
+
+
+.gridindex > * {
+
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    
+}
+
+/* Cuadros - articulos */ 
+ 
+.nombr1{
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.nov1{
+    border: none;
+    
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+
+.descuento1{
+    background-color: none;
+    width: 250px;
+    height: 100%;
+    flex-direction: row;
+      
+}
+    
+
+ .descestyle{
+     background-color: #C70039;
+     width: 30%;
+     height: 23%;
+     padding-top: 8px;
+     color: azure;
+     
+ }    
+ 
+ 
+
+.videobor3{
+    width: 230px;
+    
+}
+
+
+
+@mixin EstiloCuadros ($imagen) {
+   
+    background-image: $imagen;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 10%;
+    }
+
+.bor1 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: cuad1;
+}
+
+.bor1:hover {
+    transform: scale(1.05);
+    
+    
+}
+
+
+
+.bor2{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: cuad2;
+}
+
+.bor2:hover {
+    transform: scale(1.05);
+    
+}
+
+
+
+
+
+.index_iframe{
+     grid-area: cuad3;
+    
+}
+
+
+
+.bor4 {
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: cuad4;
+
+}
+
+.bor4:hover {
+    transform: scale(1.05);
+    
+}
+
+
+
+
+.bor5{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: cuad5;
+}
+
+.bor5:hover {
+    transform: scale(1.05);
+    
+}
+
+.bor6{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: cuad6;
+}
+
+.bor6:hover {
+    transform: scale(1.05);
+    
+}
+
+.bor7{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: cuad7;
+}
+
+.bor7:hover {
+    transform: scale(1.05);
+    
+}
+
+
+.infomain{
+    grid-area: cuad8;
+    
+}
+
+
+
+
+
+/* aquí empieza la hoja de estilo de la página nintendo */ 
+
+
+
+
+#gridnintendo{
+    border: none;
+    @extend .gridindex;
+    
+    grid-template-areas: 
+    "item1 item2 item3 item4 item5"
+    "item1 item7 item8 item9 item10"
+    "item1 item12 item13 item14 item15";
+
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px;
+
+    
+}
+
+
+#gridnintendo > * {
+
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#gridnintendo
+
+.elemento1 {
+    
+    grid-area: item1;
+}
+
+.elemento2 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item2;
+    
+}
+.elemento2:hover {
+    transform: scale(1.05)
+}
+
+
+.elemento3 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item3;
+}
+
+.elemento3:hover {
+    transform: scale(1.05)
+}
+
+.elemento4 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item4;
+
+}
+.elemento4:hover {
+    transform: scale(1.05)
+}
+
+
+.elemento5 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item5;
+}
+
+
+.elemento5:hover {
+    transform: scale(1.05)
+}
+
+
+.elemento6 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item6;
+}
+.elemento6:hover {
+    transform: scale(1.05)
+}
+.elemento7 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item7;
+}
+.elemento7:hover {
+    transform: scale(1.05)
+}
+
+.elemento8 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item8;
+   
+
+}
+.elemento8:hover {
+    transform: scale(1.05)
+}
+.elemento9 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item9;
+}
+.elemento9:hover {
+    transform: scale(1.05)
+}
+.elemento10 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item10;
+}
+
+.elemento10:hover {
+    transform: scale(1.05)
+}
+.elemento11 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item11;
+
+}
+.elemento11:hover {
+    transform: scale(1.05)
+}
+.elemento12 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item12;
+}
+.elemento12:hover {
+    transform: scale(1.05)
+}
+.elemento13 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item13;
+}
+.elemento13:hover {
+    transform: scale(1.05)
+}
+.elemento14 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item14;
+}
+.elemento14:hover {
+    transform: scale(1.05)
+}
+.elemento15 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item15;
+}
+.elemento15:hover {
+    transform: scale(1.05)
+}
+
+/* aquí empieza la hoja de estilo de la página xbox */ 
+
+$ColorEx: rgb(1, 207, 1); 
+
+$ColorEx2:rgb(0, 180, 0);
+
+
+.nombrex{
+    background-color: $ColorEx;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.novex{
+    border: none;
+    
+    text-align: center;
+    background-color: $ColorEx2;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+.descuentoex{
+    background-color: none;
+    width: 250px;
+    height: 100%;
+    flex-direction: row;
+      
+}
+    
+ .descestylex{
+     background-color: $ColorEx;
+     width: 30%;
+     height: 23%;
+     padding-top: 8px;
+     color: azure;
+     
+ }    
+ 
+ 
+
+#gridxbox{
+    
+    @extend .gridindex;
+
+
+    grid-template-areas: 
+    "i1 i2 i3 i4 i5"
+    "i1 i6 i7 i8 i9"
+    "i1 i10 i11 i12 i13";
+
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px;
+
+    
+}
+
+
+#gridxbox > * {
+
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#gridxbox
+
+.x1{
+    
+    grid-area: i1;
+}
+
+.x2 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i2;
+}
+
+.x2:hover {
+    transform: scale(1.05)}
+
+.x3 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i3;
+}
+
+.x3:hover {
+    transform: scale(1.05)}
+
+
+.x4 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i4;
+
+}
+.x4:hover {
+    transform: scale(1.05)}
+
+.x5 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i5;
+}
+
+.x5:hover {
+    transform: scale(1.05)}
+
+.x6 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i6;
+}
+
+.x6:hover {
+    transform: scale(1.05)}
+
+.x7 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i7;
+}
+
+.x7:hover {
+    transform: scale(1.05)}
+
+
+.x8 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i8;
+
+}
+
+.x8:hover {
+    transform: scale(1.05)}
+
+
+.x9 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i9;
+}
+
+.x9:hover {
+    transform: scale(1.05)}
+
+.x10 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i10;
+}
+
+.x10:hover {
+    transform: scale(1.05)}
+
+
+.x11 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i11;
+
+}
+
+.x11:hover {
+    transform: scale(1.05)}
+
+
+.x12 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i12;
+}
+
+.x12:hover {
+    transform: scale(1.05)}
+
+.x13 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i13;
+}
+
+.x13:hover {
+    transform: scale(1.05)}
+
+
+.x14 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i14;
+}
+
+.x14:hover {
+    transform: scale(1.05)}
+
+
+.x15 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i15;
+}
+
+.x15:hover {
+    transform: scale(1.05)}
+
+/* aquí empieza la hoja de estilo de la página Play */ 
+
+
+$ColorPs: rgb(0, 16, 241); 
+
+$ColorPs2:rgb(1, 3, 117);
+
+
+.precio--numero{
+    background-color: $ColorPs;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.ps_nombre{
+    border: none;
+    
+    text-align: center;
+    background-color: $ColorPs2;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+.ps_descuento{
+    background-color: none;
+    width: 250px;
+    height: 100%;
+    flex-direction: row;
+      
+}
+    
+ .descuento--porcentaje{
+     background-color: $ColorPs;
+     width: 30%;
+     height: 23%;
+     padding-top: 8px;
+     color: azure;
+     
+ }    
+ 
+ 
+
+#grid_playstation{
+    
+    @extend .gridindex;
+
+
+    grid-template-areas: 
+    "i1 i2 i3 i4 i5"
+    "i1 i6 i7 i8 i9"
+    "i1 i10 i11 i12 i13";
+
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px;
+
+    
+}
+
+
+#grid_playstation > * {
+
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#grid_playstation
+
+.playstation_casilla-1{
+    
+    grid-area: i1;
+}
+
+.playstation_casilla-2 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i2;
+}
+
+.playstation_casilla-2:hover {
+    transform: scale(1.05)}
+
+.playstation_casilla-3 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i3;
+}
+
+.playstation_casilla-3:hover {
+    transform: scale(1.05)}
+
+
+.playstation_casilla-4 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i4;
+
+}
+.playstation_casilla-4:hover {
+    transform: scale(1.05)}
+
+.playstation_casilla-5{
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i5;
+}
+
+.playstation_casilla-5:hover {
+    transform: scale(1.05)}
+
+.playstation_casilla-6 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i6;
+}
+
+.playstation_casilla-6:hover {
+    transform: scale(1.05)}
+
+.playstation_casilla-7 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i7;
+}
+
+.playstation_casilla-7:hover {
+    transform: scale(1.05)}
+
+
+.playstation_casilla-8 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i8;
+
+}
+
+.playstation_casilla-8:hover {
+    transform: scale(1.05)}
+
+
+.playstation_casilla-9 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i9;
+}
+
+.playstation_casilla-9:hover {
+    transform: scale(1.05)}
+
+.playstation_casilla-10 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i10;
+}
+
+.playstation_casilla-10:hover {
+    transform: scale(1.05)}
+
+
+.playstation_casilla-11 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i11;
+
+}
+
+.playstation_casilla-11:hover {
+    transform: scale(1.05)}
+
+
+.playstation_casilla-12 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i12;
+}
+
+.playstation_casilla-12:hover {
+    transform: scale(1.05)}
+
+.playstation_casilla-13 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i13;
+}
+
+.playstation_casilla-13:hover {
+    transform: scale(1.05)}
+
+
+.playstation_casilla-14 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i14;
+}
+
+.playstation_casilla-14:hover {
+    transform: scale(1.05)}
+
+
+.playstation_casilla-15 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: i15;
+}
+
+.playstation_casilla-15:hover {
+    transform: scale(1.05)}
+
+/* aquí empieza la hoja de estilo de la página Accesorios */ 
+#gridacce{
+    border: 2px solid black;
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+
+
+    grid-template-areas: 
+    "b1 b2 b3 b4 b5"
+    "b1 b6 b7 b8 b9"
+    "b1 b10 b11 b12 b13";
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
+
+    
+}
+
+
+#gridacce > * {
+
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#gridacce
+
+.g1{
+    grid-area: b1;
+}
+
+.g2 {
+    grid-area: b2;
+}
+
+.g3 {
+
+    grid-area: b3;
+}
+
+
+.g4 {
+    grid-area: b4;
+
+}
+
+.g5 {
+
+    grid-area: b5;
+}
+
+.g6 {
+    grid-area: b6;
+}
+
+.g7 {
+
+    grid-area: b7;
+}
+
+
+.g8 {
+    grid-area: b8;
+
+}
+
+.g9 {
+
+    grid-area: b9;
+}
+
+.g10 {
+
+    grid-area: b10;
+}
+
+
+.g11 {
+    grid-area: b11;
+
+}
+
+.g12 {
+
+    grid-area: b12;
+}
+
+.g13 {
+
+    grid-area: b13;
+}
+
+.g14 {
+
+    grid-area: b14;
+}
+.g15 {
+
+    grid-area: b15;
+}
+
+
+footer{
+    height: 600px;
+    width: 100%;
+    border: none;
+    background-color: #a00531;
+    
+}
+
+footer > * > section {
+    border: none;
+    width: 32%;
+    height: 470px;
+    margin-top: 50px;
+    color: aliceblue;
+    
+    
+}
+
+
+/* aquí empieza el footer */ 
+
+
+.stylef {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.mapa{
+
+    width: 100%;
+    height: 65%;
+}
+
+.direccion{
+    text-align: center;
+}
+
+.col-12{
+    margin-left: 75px;
+}
+
+.contacto{
+    text-align: center;
+} 
+
+.mb-3 {
+    text-align: center;
+}
+
+
+
+
+.mapafo {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+    .mapage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        padding-right: 50px;
+        text-align: right          ;
+    }
+
+    .lilmap {
+        list-style-type: none;
+       
+        a{
+        color: #ffffff;
+        text-decoration: none;
+        }
+    
+    }
+
+
+        
+
+        a:hover {
+            text-decoration: underline;
+            color: #ffae00;
+        }
+    }
+       
+
+
+
+
+.direccion {
+    padding-bottom: 20px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* a quí podrá encontrar el estilo de las páginas de cada articulo */
+
+.nintendo_content {
+    border: none;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    
+    .nintendo_contetent_galeria{
+        padding-top: 70px;
+        border: none;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 100px;
+        background-color: #ffffff;
+    
+    }
+    
+    .nintendo_content_descripcion {
+        border: none;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-right: 100px;
+        justify-content: center;
+        
+
+        .nintendo_descripcion{
+            border: none;
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+
+            .content--titulo {
+
+                font-weight: bold;
+                color: rgb(105, 105, 105);
+
+            }
+            .content--parrafo{
+                text-align: justify;
+                font-size: 14px;
+            }
+            
+        }
+
+    }
+
+
+}
+
+
+
+/*media queries */
+
+@media(max-width: 400px){
+
+    
+
+    body{
+    background-color: #ffffff;
+
+}
+
+
+
+    .navbar-toggler{
+        border: 3px solid $ColorTres;
+    }
+   
+    .container-fluid{
+        background-color: #ffae00;
+        
+    }
+    .navbar-toggler-icon {
+        border: none;
+    }
+
+    #header {
+        width: 100%;
+        background-color: #ffae00;
+        display: none;
+        
+    }
+    
+     
+
+    .nav_menu{
+        border: none;
+        
+        
+    }
+    
+    .nav_menu:hover {
+        
+        
+        background-color: $ColorTres;
+    }
+    
+    
+    .banner{
+        border: none;
+        width: 100%;
+        height: 200px;
+        
+        
+    }
+    
+    .carousel-inner {
+        height: 200px;
+    }
+    
+    #carouselExampleCaptions > * > div {
+     height: 200px;  
+    
+    }
+    
+    .menu{
+        border: none;
+        height: 70px;
+       
+        
+          
+    }
+    
+    .lista{
+        border: none;
+        display: none;
+        flex-direction:column;
+        list-style-type: none ;
+        width: 48%;
+        height: 70px;
+        
+    }
+    
+    
+    .menu > .lista > li{
+        padding: 20px;
+        height: 70px;
+        
+    }
+    
+    .menu > .lista > li > a {
+        color: aliceblue;
+        
+        border: none;
+        
+    }
+    
+    
+    .menu > .lista2 > li > a {
+        color: aliceblue;
+        
+    }
+    
+    
+    
+    .lista2{
+        border: none;
+        display: flex;
+        flex-direction: row;
+        width: 16%;
+        list-style-type: none;
+        height: 70px;
+        padding-top: 12px;
+        padding-left: 10px;
+        display: none;
+        
+    }
+    
+    .menu > .lista2 > li{
+        padding: 7px;
+    }
+    
+
+    .titulo_index {
+        color: #C70039;
+        
+    }
+        
+    .gridindex {
+    
+        background-color: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 50px;
+
+        @mixin EstiloCuadros ($imagen) {
+       
+            background-image: $imagen;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-radius: 10%;
+            height: 250px;
+            }
+
+
+        
+        
+
+        .index_iframe {
+          
+        width: 70%;
+        .pipi {
+            height: 300px;
+        }
+        
+        }
+        .bor1 {
+            @include EstiloCuadros(url("../img/hk.jpg"));
+            
+        }
+        
+        .bor1:hover {
+            transform: scale(1.05);
+            
+            
+        }
+        
+        .bor2 {
+            @include EstiloCuadros(url("../img/hk.jpg"));
+            
+        }
+        
+        .bor2:hover {
+            transform: scale(1.05);
+            
+            
+        }
+        
+        
+        .bor4 {
+            @include EstiloCuadros(url("../img/anm.jfif"));
+            
+        
+        }
+        
+        .bor4:hover {
+            transform: scale(1.05);
+            
+        }
+        
+        
+        .bor5{
+            display: none;
+        }
+        .bor5:hover {
+            transform: scale(1.05);
+           
+            
+        }
+        
+        .bor6{
+            @include EstiloCuadros(url("../img/anm.jfif"));
+            display: none;
+            
+        }
+        
+        .bor6:hover {
+            transform: scale(1.05);
+            
+        }
+        
+        .bor7{
+        
+            @include EstiloCuadros(url("../img/anm.jfif"));
+            display: none;
+            
+        }
+        
+        .bor7:hover {
+            transform: scale(1.05);
+            
+        }
+        
+        
+      
+           
+        
+        
+    }
+    
+    /* Cuadros - articulos */ 
+     
+    .nombr1{
+        background-color: #C70039;
+        color: aliceblue;
+        width: 250px;
+        height: 30px;
+        justify-content: center;
+        
+    }
+    
+    
+    .nov1{
+        border: none;
+        
+        text-align: center;
+        background-color: hsl(343, 94%, 32%);
+        width: 250px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+    
+              
+    }
+    
+    
+    .descuento1{
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+          
+    }
+        
+    
+     .descestyle{
+         background-color: #C70039;
+         width: 30%;
+         height: 23%;
+         padding-top: 8px;
+         color: azure;
+         
+     }    
+     
+     
+    
+    .videobor3{
+        width: 70%;
+        
+    }
+    
+    
+    
+   
+    
+    
+        
+    }
+    
+    
+   
+
+
+
+
+
