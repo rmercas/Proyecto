@@ -2,7 +2,7 @@
 
 
 
-
+@media(min-width: 900px){
 
 /*Variables*/
 $ColorUno: #C70039;
@@ -31,6 +31,24 @@ $xboxcolor: rgb(0, 180, 0);
    
 }
 
+.index_iframe_mobile{
+    display: none;
+}
+.grid_nintendo_mobile{ 
+    display: none;
+}
+.menu_mobile_ancla{
+    display: none;
+}
+
+.menu_mobile{
+    display: none;
+}
+
+.accesorios_iframe_mobile {
+ display: none;           
+}
+
 .nav_menu{
     border: none;
     
@@ -39,10 +57,13 @@ $xboxcolor: rgb(0, 180, 0);
 
 .nav_menu:hover {
     
-    
+
     background-color: $ColorTres;
 }
 
+.titulo_nintendo{
+    text-align: center;
+}
 
 .banner{
     border: none;
@@ -186,11 +207,13 @@ $xboxcolor: rgb(0, 180, 0);
 
 
 
+
+    
+
+
 /* aquí empieza la hoja de estilo de la página index */ 
-
-
-
-.gridindex{
+.grid_index{
+    
 
     display: grid;
     height: 100vh;
@@ -201,16 +224,16 @@ $xboxcolor: rgb(0, 180, 0);
 
 
     grid-template-areas: 
-    "cuad1 cuad2 cuad3"
-    "cuad4 cuad5 cuad3"
-    "cuad6 cuad7 cuad8";
+    "item1 item2 item3"
+    "item4 item5 item3"
+    "item6 item7 item8";
 
     grid-template-columns: 250px 250px 600px;
     grid-template-rows: 250px 250px 250px;
 }
 
 
-.gridindex > * {
+.grid_index > * {
 
     background-color: rgb(250, 250, 250);
     display: flex;
@@ -224,7 +247,7 @@ $xboxcolor: rgb(0, 180, 0);
 
 /* Cuadros - articulos */ 
  
-.nombr1{
+.grid_index-nombre{
     background-color: #C70039;
     color: aliceblue;
     width: 250px;
@@ -234,7 +257,7 @@ $xboxcolor: rgb(0, 180, 0);
 }
 
 
-.nov1{
+.grid_index_valor{
     border: none;
     
     text-align: center;
@@ -250,24 +273,6 @@ $xboxcolor: rgb(0, 180, 0);
 }
 
 
-.descuento1{
-    background-color: none;
-    width: 250px;
-    height: 100%;
-    flex-direction: row;
-      
-}
-    
-
- .descestyle{
-     background-color: #C70039;
-     width: 30%;
-     height: 23%;
-     padding-top: 8px;
-     color: azure;
-     
- }    
- 
  
 
 .videobor3{
@@ -282,15 +287,30 @@ $xboxcolor: rgb(0, 180, 0);
     background-image: $imagen;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 10%;
+    border-top-right-radius:  10%;
     }
 
-.bor1 {
+.grid_index_elemento1 {
     @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: cuad1;
+    grid-area: item1;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-1_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
 }
 
-.bor1:hover {
+.grid_index_elemento1:hover {
     transform: scale(1.05);
     
     
@@ -298,12 +318,27 @@ $xboxcolor: rgb(0, 180, 0);
 
 
 
-.bor2{
+.grid_index_elemento2{
     @include EstiloCuadros(url("../img/anm.jfif"));
-    grid-area: cuad2;
+    grid-area: item2;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
 }
 
-.bor2:hover {
+.grid_index_elemento2:hover {
     transform: scale(1.05);
     
 }
@@ -313,19 +348,34 @@ $xboxcolor: rgb(0, 180, 0);
 
 
 .index_iframe{
-     grid-area: cuad3;
+     grid-area: item3;
     
 }
 
 
 
-.bor4 {
+.grid_index_elemento4 {
     @include EstiloCuadros(url("../img/anm.jfif"));
-    grid-area: cuad4;
+    grid-area: item4;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
 
 }
 
-.bor4:hover {
+.grid_index_elemento4:hover {
     transform: scale(1.05);
     
 }
@@ -333,56 +383,130 @@ $xboxcolor: rgb(0, 180, 0);
 
 
 
-.bor5{
+.grid_index_elemento5{
 
     @include EstiloCuadros(url("../img/anm.jfif"));
-    grid-area: cuad5;
+    grid-area: item5;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
 }
 
-.bor5:hover {
+.grid_index_elemento5:hover {
     transform: scale(1.05);
     
 }
 
-.bor6{
+.grid_index_elemento6{
     @include EstiloCuadros(url("../img/anm.jfif"));
-    grid-area: cuad6;
+    grid-area: item6;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-6_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
 }
 
-.bor6:hover {
+.grid_index_elemento6:hover {
     transform: scale(1.05);
     
 }
 
-.bor7{
+.grid_index_elemento7{
 
     @include EstiloCuadros(url("../img/anm.jfif"));
-    grid-area: cuad7;
+    grid-area: item7;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
 }
 
-.bor7:hover {
+.grid_index_elemento7:hover {
     transform: scale(1.05);
+    
     
 }
 
 
 .infomain{
-    grid-area: cuad8;
+    grid-area: item8;
     
 }
 
 
+
+
+
+
+
+
+
+ 
 
 
 
 /* aquí empieza la hoja de estilo de la página nintendo */ 
 
 
+.grid_nintendo_valor {
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
 
-
-#gridnintendo{
+.grid_nintendo-nombre {
     border: none;
-    @extend .gridindex;
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);         
+}
+
+
+.grid_nintendo{
+    border: none;
+    @extend .grid_index;
     
     grid-template-areas: 
     "item1 item2 item3 item4 item5"
@@ -396,146 +520,522 @@ $xboxcolor: rgb(0, 180, 0);
 }
 
 
-#gridnintendo > * {
+
+
+.grid_nintendo > * {
 
     background-color: rgb(207, 207, 207);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
+    
 
 }
 
-#gridnintendo
+.grid_nintendo
 
-.elemento1 {
-    
+.grid_nintendo_elemento-1 {
+   
     grid-area: item1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+    .elemento-1_consolas_titulo {
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        color: #474747;
+        
+         
+    }
+
+
+    
+
+
+    .elemento-1_consolas_articulo1 {
+       
+        height: 150px;
+        width: 80%;
+        .consolas_articulo1_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch_miniatura.png"));
+    
+            .consolas_articulo1_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+
+    }
+
+
+    .elemento-1_consolas_articulo2 {
+        
+        height: 150px;
+        width: 80%;
+        .consolas_articulo2_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-AC_miniatura.png"));
+    
+            .consolas_articulo2_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .elemento-1_consolas_articulo3 {
+        
+        height: 150px;
+        width: 80%;
+        .consolas_articulo3_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-Lite_miniatura.png"));
+    
+            .consolas_articulo3_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .elemento-1_consolas_articulo4 {
+        
+        height: 150px;
+        width: 80%;
+        margin-bottom: 50px;
+        .consolas_articulo4_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/SNES_miniatura.png"));
+    
+            .consolas_articulo4_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+    }
 }
 
-.elemento2 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+.grid_nintendo_elemento-2 {
+    @include EstiloCuadros(url("../img/super-mario-3d-world-bowsers-fury.jpg"));
     grid-area: item2;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
     
 }
-.elemento2:hover {
+.grid_nintendo_elemento-2:hover {
     transform: scale(1.05)
 }
 
 
-.elemento3 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+.grid_nintendo_elemento-3 {
+    @include EstiloCuadros(url("../img/animal-crossing-nh.jpg"));
     grid-area: item3;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-3_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+    
 }
 
-.elemento3:hover {
+.grid_nintendo_elemento-3:hover {
     transform: scale(1.05)
 }
 
-.elemento4 {
+.grid_nintendo_elemento-4 {
     @include EstiloCuadros(url("../img/hk.jpg"));
     grid-area: item4;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
 
 }
-.elemento4:hover {
+
+.grid_nintendo_elemento-4:hover {
     transform: scale(1.05)
 }
 
 
-.elemento5 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+.grid_nintendo_elemento-5 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
     grid-area: item5;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-
-.elemento5:hover {
+.grid_nintendo_elemento-5:hover {
     transform: scale(1.05)
 }
 
 
-.elemento6 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: item6;
-}
-.elemento6:hover {
-    transform: scale(1.05)
-}
-.elemento7 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+
+
+.grid_nintendo_elemento-7 {
+    @include EstiloCuadros(url("../img/mario-odyssey.jpg"));
     grid-area: item7;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
-.elemento7:hover {
+.grid_nintendo_elemento-7:hover {
     transform: scale(1.05)
 }
 
-.elemento8 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+.grid_nintendo_elemento-8 {
+    @include EstiloCuadros(url("../img/ori.jpg"));
     grid-area: item8;
-   
-
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-8_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
-.elemento8:hover {
+
+.grid_nintendo_elemento-8:hover {
     transform: scale(1.05)
 }
-.elemento9 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+
+.grid_nintendo_elemento-9 {
+    @include EstiloCuadros(url("../img/xenoblade.jpg"));
     grid-area: item9;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-9_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
-.elemento9:hover {
+
+.grid_nintendo_elemento-9:hover {
     transform: scale(1.05)
 }
-.elemento10 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+
+.grid_nintendo_elemento-10 {
+    @include EstiloCuadros(url("../img/Luigi's-Mansion-3.jpg"));
     grid-area: item10;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-10_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-.elemento10:hover {
+.grid_nintendo_elemento-10:hover {
     transform: scale(1.05)
 }
-.elemento11 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+
+.grid_nintendo_elemento-11 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg.jpg"));
     grid-area: item11;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-11_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+.grid_nintendo_elemento-11:hover {
+    transform: scale(1.05)
+}
 
-}
-.elemento11:hover {
-    transform: scale(1.05)
-}
-.elemento12 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+.grid_nintendo_elemento-12 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg"));
     grid-area: item12;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-12_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
 }
-.elemento12:hover {
+.grid_nintendo_elemento-12:hover {
     transform: scale(1.05)
 }
-.elemento13 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+
+.grid_nintendo_elemento-13 {
+    @include EstiloCuadros(url("../img/Smash.jpg"));
     grid-area: item13;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-13_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
 }
-.elemento13:hover {
+.grid_nintendo_elemento-13:hover {
     transform: scale(1.05)
 }
-.elemento14 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+
+.grid_nintendo_elemento-14 {
+    @include EstiloCuadros(url("../img/Octopath-Traveler.jpg"));
     grid-area: item14;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-14_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
 }
-.elemento14:hover {
+
+.grid_nintendo_elemento-14:hover {
     transform: scale(1.05)
 }
-.elemento15 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+
+
+.grid_nintendo_elemento-15 {
+    @include EstiloCuadros(url("../img/Hades.jpg"));
     grid-area: item15;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-15_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+            
+               
+           }
+          
+    }
 }
-.elemento15:hover {
+.grid_nintendo_elemento-15:hover {
     transform: scale(1.05)
 }
 
 /* aquí empieza la hoja de estilo de la página xbox */ 
 
-$ColorEx: rgb(1, 207, 1); 
+$ColorEx: rgb(1, 207, 104); 
 
-$ColorEx2:rgb(0, 180, 0);
+$ColorEx2:rgb(0, 165, 82);
 
+.grid_xbox_mobile {
+    display: none;
+}
 
-.nombrex{
+.grid_xbox_valor {
     background-color: $ColorEx;
     color: aliceblue;
     width: 250px;
@@ -544,50 +1044,31 @@ $ColorEx2:rgb(0, 180, 0);
     
 }
 
-
-.novex{
+.grid_xbox-nombre {
     border: none;
-    
     text-align: center;
-    background-color: $ColorEx2;
+    background-color:$ColorEx2;
     width: 250px;
     height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: rgb(255, 255, 255);
-
-          
+    color: rgb(255, 255, 255);         
 }
 
-.descuentoex{
-    background-color: none;
-    width: 250px;
-    height: 100%;
-    flex-direction: row;
-      
-}
-    
- .descestylex{
-     background-color: $ColorEx;
-     width: 30%;
-     height: 23%;
-     padding-top: 8px;
-     color: azure;
-     
- }    
+
  
  
 
-#gridxbox{
+.grid_xbox{
     
-    @extend .gridindex;
+    @extend .grid_index;
 
 
     grid-template-areas: 
-    "i1 i2 i3 i4 i5"
-    "i1 i6 i7 i8 i9"
-    "i1 i10 i11 i12 i13";
+    "item1 item2 item3 item4 item5"
+    "item1 item7 item8 item9 item10"
+    "item1 item12 item13 item14 item15";
 
     grid-template-columns: 250px 250px 250px 250px 250px;
     grid-template-rows: 250px 250px 250px 250px;
@@ -596,7 +1077,7 @@ $ColorEx2:rgb(0, 180, 0);
 }
 
 
-#gridxbox > * {
+.grid_xbox > * {
 
     background-color: rgb(207, 207, 207);
     display: flex;
@@ -605,133 +1086,500 @@ $ColorEx2:rgb(0, 180, 0);
 
 }
 
-#gridxbox
+.grid_xbox
 
-.x1{
+.grid_xbox_elemento-1 {
+   
+    grid-area: item1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
-    grid-area: i1;
+
+    .xbox_elemento-1_consolas_titulo {
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        color: #474747;
+        
+         
+    }
+
+
+    
+
+
+    .xbox_elemento-1_consolas_articulo1 {
+       
+        height: 150px;
+        width: 80%;
+        .xbox_consolas_articulo1_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch_miniatura.png"));
+    
+            .xbox_consolas_articulo1_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+
+    }
+
+
+    .xbox_elemento-1_consolas_articulo2 {
+        
+        height: 150px;
+        width: 80%;
+        .xbox_consolas_articulo2_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-AC_miniatura.png"));
+    
+            .xbox_consolas_articulo2_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .xbox_elemento-1_consolas_articulo3 {
+        
+        height: 150px;
+        width: 80%;
+        .xbox_consolas_articulo3_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-Lite_miniatura.png"));
+    
+            .xbox_consolas_articulo3_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .xbox_elemento-1_consolas_articulo4 {
+        
+        height: 150px;
+        width: 80%;
+        margin-bottom: 50px;
+        .xbox_consolas_articulo4_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/SNES_miniatura.png"));
+    
+            .xbox_consolas_articulo4_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+    }
 }
 
-.x2 {
+.grid_xbox_elemento-2 {
+    @include EstiloCuadros(url("../img/super-mario-3d-world-bowsers-fury.jpg"));
+    grid-area: item2;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #ecdd00;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+    
+}
+.grid_xbox_elemento-2:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_xbox_elemento-3 {
+    @include EstiloCuadros(url("../img/animal-crossing-nh.jpg"));
+    grid-area: item3;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-3_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+    
+}
+
+.grid_xbox_elemento-3:hover {
+    transform: scale(1.05)
+}
+
+.grid_xbox_elemento-4 {
     @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i2;
-}
-
-.x2:hover {
-    transform: scale(1.05)}
-
-.x3 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i3;
-}
-
-.x3:hover {
-    transform: scale(1.05)}
-
-
-.x4 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i4;
-
-}
-.x4:hover {
-    transform: scale(1.05)}
-
-.x5 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i5;
-}
-
-.x5:hover {
-    transform: scale(1.05)}
-
-.x6 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i6;
-}
-
-.x6:hover {
-    transform: scale(1.05)}
-
-.x7 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i7;
-}
-
-.x7:hover {
-    transform: scale(1.05)}
-
-
-.x8 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i8;
+    grid-area: item4;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
 
 }
 
-.x8:hover {
-    transform: scale(1.05)}
-
-
-.x9 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i9;
+.grid_xbox_elemento-4:hover {
+    transform: scale(1.05)
 }
 
-.x9:hover {
-    transform: scale(1.05)}
 
-.x10 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i10;
+.grid_xbox_elemento-5 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
+    grid-area: item5;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-.x10:hover {
-    transform: scale(1.05)}
-
-
-.x11 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i11;
-
+.grid_xbox_elemento-5:hover {
+    transform: scale(1.05)
 }
 
-.x11:hover {
-    transform: scale(1.05)}
 
 
-.x12 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i12;
+.grid_xbox_elemento-7 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
+    grid-area: item7;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-.x12:hover {
-    transform: scale(1.05)}
-
-.x13 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i13;
+.grid_xbox_elemento-7:hover {
+    transform: scale(1.05)
 }
 
-.x13:hover {
-    transform: scale(1.05)}
 
 
-.x14 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i14;
+.grid_xbox_elemento-8 {
+    @include EstiloCuadros(url("../img/ori.jpg"));
+    grid-area: item8;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-8_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-.x14:hover {
-    transform: scale(1.05)}
-
-
-.x15 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i15;
+.grid_xbox_elemento-8:hover {
+    transform: scale(1.05)
 }
 
-.x15:hover {
-    transform: scale(1.05)}
+
+.grid_xbox_elemento-9 {
+    @include EstiloCuadros(url("../img/xenoblade.jpg"));
+    grid-area: item9;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-9_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_xbox_elemento-9:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_xbox_elemento-10 {
+    @include EstiloCuadros(url("../img/Luigi's-Mansion-3.jpg"));
+    grid-area: item10;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-10_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_xbox_elemento-10:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_xbox_elemento-11 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg.jpg"));
+    grid-area: item11;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-11_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+.grid_xbox_elemento-11:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_xbox_elemento-12 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg"));
+    grid-area: item12;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-12_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+.grid_xbox_elemento-12:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_xbox_elemento-13 {
+    @include EstiloCuadros(url("../img/Smash.jpg"));
+    grid-area: item13;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-13_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+.grid_xbox_elemento-13:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_xbox_elemento-14 {
+    @include EstiloCuadros(url("../img/Octopath-Traveler.jpg"));
+    grid-area: item14;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-14_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+
+.grid_xbox_elemento-14:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_xbox_elemento-15 {
+    @include EstiloCuadros(url("../img/Hades.jpg"));
+    grid-area: item15;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-15_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+            
+               
+           }
+          
+    }
+}
+.grid_xbox_elemento-15:hover {
+    transform: scale(1.05)
+}
+
 
 /* aquí empieza la hoja de estilo de la página Play */ 
 
@@ -741,7 +1589,12 @@ $ColorPs: rgb(0, 16, 241);
 $ColorPs2:rgb(1, 3, 117);
 
 
-.precio--numero{
+.grid_ps_mobile {
+    display: none;
+    
+}
+
+.grid_ps_valor {
     background-color: $ColorPs;
     color: aliceblue;
     width: 250px;
@@ -750,50 +1603,31 @@ $ColorPs2:rgb(1, 3, 117);
     
 }
 
-
-.ps_nombre{
+.grid_ps-nombre {
     border: none;
-    
     text-align: center;
-    background-color: $ColorPs2;
+    background-color:$ColorPs2;
     width: 250px;
     height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: rgb(255, 255, 255);
-
-          
+    color: rgb(255, 255, 255);         
 }
 
-.ps_descuento{
-    background-color: none;
-    width: 250px;
-    height: 100%;
-    flex-direction: row;
-      
-}
-    
- .descuento--porcentaje{
-     background-color: $ColorPs;
-     width: 30%;
-     height: 23%;
-     padding-top: 8px;
-     color: azure;
-     
- }    
+
  
  
 
-#grid_playstation{
+.grid_ps{
     
-    @extend .gridindex;
+    @extend .grid_index;
 
 
     grid-template-areas: 
-    "i1 i2 i3 i4 i5"
-    "i1 i6 i7 i8 i9"
-    "i1 i10 i11 i12 i13";
+    "item1 item2 item3 item4 item5"
+    "item1 item7 item8 item9 item10"
+    "item1 item12 item13 item14 item15";
 
     grid-template-columns: 250px 250px 250px 250px 250px;
     grid-template-rows: 250px 250px 250px 250px;
@@ -802,7 +1636,7 @@ $ColorPs2:rgb(1, 3, 117);
 }
 
 
-#grid_playstation > * {
+.grid_ps > * {
 
     background-color: rgb(207, 207, 207);
     display: flex;
@@ -811,340 +1645,1052 @@ $ColorPs2:rgb(1, 3, 117);
 
 }
 
-#grid_playstation
+.grid_ps
 
-.playstation_casilla-1{
+.grid_ps_elemento-1 {
+   
+    grid-area: item1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
-    grid-area: i1;
+
+    .ps_elemento-1_consolas_titulo {
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        color: #474747;
+        
+         
+    }
+
+
+    
+
+
+    .ps_elemento-1_consolas_articulo1 {
+       
+        height: 150px;
+        width: 80%;
+        .ps_consolas_articulo1_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch_miniatura.png"));
+    
+            .ps_consolas_articulo1_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+
+    }
+
+
+    .ps_elemento-1_consolas_articulo2 {
+        
+        height: 150px;
+        width: 80%;
+        .ps_consolas_articulo2_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-AC_miniatura.png"));
+    
+            .ps_consolas_articulo2_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .ps_elemento-1_consolas_articulo3 {
+        
+        height: 150px;
+        width: 80%;
+        .ps_consolas_articulo3_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-Lite_miniatura.png"));
+    
+            .ps_consolas_articulo3_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .ps_elemento-1_consolas_articulo4 {
+        
+        height: 150px;
+        width: 80%;
+        margin-bottom: 50px;
+        .ps_consolas_articulo4_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/SNES_miniatura.png"));
+    
+            .ps_consolas_articulo4_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+    }
 }
 
-.playstation_casilla-2 {
+.grid_ps_elemento-2 {
+    @include EstiloCuadros(url("../img/super-mario-3d-world-bowsers-fury.jpg"));
+    grid-area: item2;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #ecdd00;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+    
+}
+.grid_ps_elemento-2:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_ps_elemento-3 {
+    @include EstiloCuadros(url("../img/animal-crossing-nh.jpg"));
+    grid-area: item3;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-3_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+    
+}
+
+.grid_ps_elemento-3:hover {
+    transform: scale(1.05)
+}
+
+.grid_ps_elemento-4 {
     @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i2;
-}
-
-.playstation_casilla-2:hover {
-    transform: scale(1.05)}
-
-.playstation_casilla-3 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i3;
-}
-
-.playstation_casilla-3:hover {
-    transform: scale(1.05)}
-
-
-.playstation_casilla-4 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i4;
-
-}
-.playstation_casilla-4:hover {
-    transform: scale(1.05)}
-
-.playstation_casilla-5{
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i5;
-}
-
-.playstation_casilla-5:hover {
-    transform: scale(1.05)}
-
-.playstation_casilla-6 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i6;
-}
-
-.playstation_casilla-6:hover {
-    transform: scale(1.05)}
-
-.playstation_casilla-7 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i7;
-}
-
-.playstation_casilla-7:hover {
-    transform: scale(1.05)}
-
-
-.playstation_casilla-8 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i8;
+    grid-area: item4;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
 
 }
 
-.playstation_casilla-8:hover {
-    transform: scale(1.05)}
-
-
-.playstation_casilla-9 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i9;
+.grid_ps_elemento-4:hover {
+    transform: scale(1.05)
 }
 
-.playstation_casilla-9:hover {
-    transform: scale(1.05)}
 
-.playstation_casilla-10 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i10;
+.grid_ps_elemento-5 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
+    grid-area: item5;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-.playstation_casilla-10:hover {
-    transform: scale(1.05)}
-
-
-.playstation_casilla-11 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i11;
-
+.grid_ps_elemento-5:hover {
+    transform: scale(1.05)
 }
 
-.playstation_casilla-11:hover {
-    transform: scale(1.05)}
 
 
-.playstation_casilla-12 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i12;
+.grid_ps_elemento-7 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
+    grid-area: item7;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-.playstation_casilla-12:hover {
-    transform: scale(1.05)}
-
-.playstation_casilla-13 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i13;
+.grid_ps_elemento-7:hover {
+    transform: scale(1.05)
 }
 
-.playstation_casilla-13:hover {
-    transform: scale(1.05)}
 
 
-.playstation_casilla-14 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i14;
+.grid_ps_elemento-8 {
+    @include EstiloCuadros(url("../img/ori.jpg"));
+    grid-area: item8;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-8_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
 }
 
-.playstation_casilla-14:hover {
-    transform: scale(1.05)}
-
-
-.playstation_casilla-15 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
-    grid-area: i15;
+.grid_ps_elemento-8:hover {
+    transform: scale(1.05)
 }
 
-.playstation_casilla-15:hover {
-    transform: scale(1.05)}
+
+.grid_ps_elemento-9 {
+    @include EstiloCuadros(url("../img/xenoblade.jpg"));
+    grid-area: item9;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-9_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_ps_elemento-9:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_ps_elemento-10 {
+    @include EstiloCuadros(url("../img/Luigi's-Mansion-3.jpg"));
+    grid-area: item10;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-10_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_ps_elemento-10:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_ps_elemento-11 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg.jpg"));
+    grid-area: item11;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-11_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+.grid_ps_elemento-11:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_ps_elemento-12 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg"));
+    grid-area: item12;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-12_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+.grid_ps_elemento-12:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_ps_elemento-13 {
+    @include EstiloCuadros(url("../img/Smash.jpg"));
+    grid-area: item13;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-13_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+.grid_ps_elemento-13:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_ps_elemento-14 {
+    @include EstiloCuadros(url("../img/Octopath-Traveler.jpg"));
+    grid-area: item14;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-14_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+
+.grid_ps_elemento-14:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_ps_elemento-15 {
+    @include EstiloCuadros(url("../img/Hades.jpg"));
+    grid-area: item15;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-15_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+            
+               
+           }
+          
+    }
+}
+.grid_ps_elemento-15:hover {
+    transform: scale(1.05)
+}
 
 /* aquí empieza la hoja de estilo de la página Accesorios */ 
-#gridacce{
-    border: 2px solid black;
-    width: 100%;
-    display: grid;
-    height: 100vh;
-    grid-gap: 10px;
+$ColorPs: rgb(0, 16, 241); 
+
+$ColorPs2:rgb(1, 3, 117);
+
+.grid_accesorios_mobile{
+    display: none;
+}
+
+.grid_accesorios_valor {
+    background-color: $ColorPs;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+.grid_accesorios-nombre {
+    border: none;
+    text-align: center;
+    background-color:$ColorPs2;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);         
+}
+
+
+ 
+ 
+
+.grid_accesorios{
+    
+    @extend .grid_index;
 
 
     grid-template-areas: 
-    "b1 b2 b3 b4 b5"
-    "b1 b6 b7 b8 b9"
-    "b1 b10 b11 b12 b13";
+    "item1 item2 item3 item4 item5"
+    "item1 item7 item8 item9 item10"
+    "item1 item12 item13 item14 item15";
 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 2fr;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px 250px;
 
     
 }
 
 
-#gridacce > * {
+.grid_accesorios > * {
 
-    background-color: blueviolet;
+    background-color: rgb(207, 207, 207);
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-#gridacce
+.grid_accesorios
 
-.g1{
-    grid-area: b1;
-}
-
-.g2 {
-    grid-area: b2;
-}
-
-.g3 {
-
-    grid-area: b3;
-}
-
-
-.g4 {
-    grid-area: b4;
-
-}
-
-.g5 {
-
-    grid-area: b5;
-}
-
-.g6 {
-    grid-area: b6;
-}
-
-.g7 {
-
-    grid-area: b7;
-}
-
-
-.g8 {
-    grid-area: b8;
-
-}
-
-.g9 {
-
-    grid-area: b9;
-}
-
-.g10 {
-
-    grid-area: b10;
-}
-
-
-.g11 {
-    grid-area: b11;
-
-}
-
-.g12 {
-
-    grid-area: b12;
-}
-
-.g13 {
-
-    grid-area: b13;
-}
-
-.g14 {
-
-    grid-area: b14;
-}
-.g15 {
-
-    grid-area: b15;
-}
-
-
-footer{
-    height: 600px;
-    width: 100%;
-    border: none;
-    background-color: #a00531;
-    
-}
-
-footer > * > section {
-    border: none;
-    width: 32%;
-    height: 470px;
-    margin-top: 50px;
-    color: aliceblue;
-    
-    
-}
-
-
-/* aquí empieza el footer */ 
-
-
-.stylef {
+.grid_accesorios_elemento-1 {
+   
+    grid-area: item1;
     display: flex;
-    justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.mapa{
-
-    width: 100%;
-    height: 65%;
-}
-
-.direccion{
-    text-align: center;
-}
-
-.col-12{
-    margin-left: 75px;
-}
-
-.contacto{
-    text-align: center;
-} 
-
-.mb-3 {
-    text-align: center;
-}
-
-
-
-
-.mapafo {
+    flex-direction: column;
+    justify-content: space-between;
     
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-    
-    .mapage {
+
+    .accesorios_elemento-1_consolas_titulo {
+        height: 50px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-top: 20px;
+        color: #474747;
         
-        padding-right: 50px;
-        text-align: right          ;
+         
     }
 
-    .lilmap {
-        list-style-type: none;
-       
-        a{
-        color: #ffffff;
-        text-decoration: none;
-        }
+
     
-    }
 
+
+    .accesorios_elemento-1_consolas_articulo1 {
+       
+        height: 150px;
+        width: 80%;
+        .accesorios_consolas_articulo1_contenedor {
 
         
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch_miniatura.png"));
+    
+            .accesorios_consolas_articulo1_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
 
-        a:hover {
-            text-decoration: underline;
-            color: #ffae00;
+    }
+
+
+    .accesorios_elemento-1_consolas_articulo2 {
+        
+        height: 150px;
+        width: 80%;
+        .accesorios_consolas_articulo2_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-AC_miniatura.png"));
+    
+            .accesorios_consolas_articulo2_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
         }
     }
-       
+    .accesorios_elemento-1_consolas_articulo3 {
+        
+        height: 150px;
+        width: 80%;
+        .accesorios_consolas_articulo3_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-Lite_miniatura.png"));
+    
+            .accesorios_consolas_articulo3_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .accesorios_elemento-1_consolas_articulo4 {
+        
+        height: 150px;
+        width: 80%;
+        margin-bottom: 50px;
+        .accesorios_consolas_articulo4_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/SNES_miniatura.png"));
+    
+            .accesorios_consolas_articulo4_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+    }
+}
+
+.grid_accesorios_elemento-2 {
+    @include EstiloCuadros(url("../img/super-mario-3d-world-bowsers-fury.jpg"));
+    grid-area: item2;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #ecdd00;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+    
+}
+.grid_accesorios_elemento-2:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-3 {
+    @include EstiloCuadros(url("../img/animal-crossing-nh.jpg"));
+    grid-area: item3;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-3_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+    
+}
+
+.grid_accesorios_elemento-3:hover {
+    transform: scale(1.05)
+}
+
+.grid_accesorios_elemento-4 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item4;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+
+}
+
+.grid_accesorios_elemento-4:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-5 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
+    grid-area: item5;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_accesorios_elemento-5:hover {
+    transform: scale(1.05)
+}
 
 
 
+.grid_accesorios_elemento-7 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
+    grid-area: item7;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
 
-.direccion {
-    padding-bottom: 20px;
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.grid_accesorios_elemento-7:hover {
+    transform: scale(1.05)
+}
+
+
+
+.grid_accesorios_elemento-8 {
+    @include EstiloCuadros(url("../img/ori.jpg"));
+    grid-area: item8;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-8_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_accesorios_elemento-8:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-9 {
+    @include EstiloCuadros(url("../img/xenoblade.jpg"));
+    grid-area: item9;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-9_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_accesorios_elemento-9:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-10 {
+    @include EstiloCuadros(url("../img/Luigi's-Mansion-3.jpg"));
+    grid-area: item10;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-10_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_accesorios_elemento-10:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-11 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg.jpg"));
+    grid-area: item11;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-11_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+.grid_accesorios_elemento-11:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-12 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg"));
+    grid-area: item12;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-12_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+.grid_accesorios_elemento-12:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-13 {
+    @include EstiloCuadros(url("../img/Smash.jpg"));
+    grid-area: item13;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-13_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+.grid_accesorios_elemento-13:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-14 {
+    @include EstiloCuadros(url("../img/Octopath-Traveler.jpg"));
+    grid-area: item14;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-14_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+
+.grid_accesorios_elemento-14:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_accesorios_elemento-15 {
+    @include EstiloCuadros(url("../img/Hades.jpg"));
+    grid-area: item15;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-15_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+            
+               
+           }
+          
+    }
+}
+.grid_accesorios_elemento-15:hover {
+    transform: scale(1.05)
 }
 
 
@@ -1159,25 +2705,57 @@ footer > * > section {
     margin-top: 100px;
     
     .nintendo_contetent_galeria{
-        padding-top: 70px;
+        
         border: none;
         width: 50%;
-        height: 100%;
+        height: 550px;
         display: flex;
         flex-direction: row;
         margin-left: 100px;
-        background-color: #ffffff;
+        
     
     }
+
+        
+    .carousel-indicators{
+        padding-bottom: 100px;
+    }
+.carousel-control-prev-icon{
+        background-color: #C70039;
+        border-radius: 10%;
+        padding: 20px;
+    }
     
+.carousel-control-prev-icon:hover{
+
+    background-color: #a00531;
+    transform: scale(1.05);
+}
+
+    
+
+.carousel-control-next-icon:hover{
+    background-color: #a00531;
+    transform: scale(1.05)
+}
+   .carousel-control-next-icon{
+
+    background-color: #C70039;
+    border-radius: 10%;
+    padding: 20px;
+   }
+
+   
     .nintendo_content_descripcion {
         border: none;
         width: 50%;
-        height: 100%;
+        height: 463px;
         display: flex;
         flex-direction: row;
         margin-right: 100px;
         justify-content: center;
+
+        
         
 
         .nintendo_descripcion{
@@ -1189,6 +2767,15 @@ footer > * > section {
             text-align: center;
             background-color: #ffffff;
             padding: 40px;
+
+            .content--precio {
+                background-color: #C70039;
+                color: #f5f4f4;
+                padding: 15px;
+                width: 100%;
+                font-weight: bold;
+    
+            }
 
             .content--titulo {
 
@@ -1208,306 +2795,2069 @@ footer > * > section {
 
 }
 
+}
+
+@media(min-width: 401px) and (max-width: 899px){
+/*Variables*/
+$ColorUno: #C70039;
+$ColorDos:  rgb(253, 33, 70);
+$ColorTres: #a00531;
+$xboxcolor: rgb(0, 180, 0);
+
+* > html{
+    padding: 0%;
+    margin: 0%;
+    
+}
+
+* > body{
+   
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f4f4;
+    
+
+}
+
+#header{
+     width: 100%;
+     border: none;
+     background-color: $ColorUno;
+   
+}
+
+.grid_nintendo_mobile{ 
+    display: none;
+}
+.menu_mobile_ancla{
+    display: none;
+}
+
+.menu_mobile{
+    display: none;
+}
+
+.index_iframe_mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    
+    
+    
+}
+
+.nav_menu{
+    border: none;
+    
+    
+}
+
+.nav_menu:hover {
+    
+
+    background-color: $ColorTres;
+}
+
+.titulo_nintendo{
+    text-align: center;
+}
+
+.banner{
+    border: none;
+    width: 100%;
+    height: 600px;
+}
+
+.carousel-inner {
+    height: 600px;
+}
+
+#carouselExampleCaptions > * > div {
+ height: 600px;  
+
+}
+
+.menu{
+    border: none;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+      
+}
+
+.lista{
+    border: none;
+    display: flex;
+    flex-direction:row;
+    list-style-type: none ;
+    width: 48%;
+    height: 70px;
+    
+}
 
 
-/*media queries */
+.menu > .lista > li{
+    padding: 20px;
+    height: 70px;
+    
+}
 
-@media(max-width: 400px){
+.menu > .lista > li > a {
+    color: aliceblue;
+    
+    border: none;
+    
+}
+
+
+.menu > .lista2 > li > a {
+    color: aliceblue;
+    
+}
+
+
+
+.lista2{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    list-style-type: none;
+    height: 70px;
+    padding-top: 12px;
+    padding-left: 10px;
+    display: none;
+    
+}
+
+.menu > .lista2 > li{
+    padding: 7px;
+}
+
+
+#horario{
+
+    color: rgb(253, 33, 70);
+}
+
+
+/* títulos aquí */ 
+
+@mixin condicional ($titulo) {
+    font-weight: ($titulo);
+
+    @if $titulo == green {
+        text-align: center;
+        font-weight: bolder;
+        color: $xboxcolor
+        
+    } @else if $titulo == blue {
+        text-align: center;
+        font-weight: bolder;
+        
+        color: blue;
+    } 
+    
+    @else if $titulo == red {
+        font-weight: bolder;
+        text-align: center;
+        font-weight: bolder;
+        color: $ColorTres;
+
+        
+    }
+
+    @else {
+        font-weight: bolder;
+        text-align: center;
+        font-weight: bolder;
+        color: rgb(80, 79, 79);
+        
+    }
+    
+}
+
+.titulonin {
+    @include condicional(red)
+}
+
+.tituloexb {
+    @include condicional(green)
+}
+
+.titulopla {
+
+    @include condicional(blue)
+}
+
+
+.tituloacc {
+
+    @include condicional(yellow)
+}
+
+.titulo_index {
+    @include condicional(yellow)
+}
+
+.grid_index{
+
 
     
 
-    body{
-    background-color: #ffffff;
+    display: grid;
+    height: 100vh;
+    grid-gap: 20px;
+    
+    
+    justify-content: center;
+
+
+    grid-template-areas: 
+    "item1 item2 "
+    "item4 item5 "
+    "item6 item7 ";
+
+    grid-template-columns: 250px 250px ;
+    grid-template-rows: 250px 250px 250px;
+}
+
+
+.grid_index > * {
+
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+/* Cuadros - articulos */ 
+ 
+.grid_index-nombre{
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.grid_index_valor{
+    border: none;
+    
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+
+ 
+
+.videobor3{
+    width: none
+;
+    
+}
+
+
+
+@mixin EstiloCuadros ($imagen) {
+   
+    background-image: $imagen;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-right-radius:  10%;
+    }
+
+    .grid_index_elemento1 {
+        @include EstiloCuadros(url("../img/hk.jpg"));
+        grid-area: item1;
+        .grid_index_descuento {
+            background-color: none;
+            width: 250px;
+            height: 100%;
+            flex-direction: row;
+            .elemento-1_descuento--porcentaje {
+                background-color: #C70039;
+                width: 30%;
+                height: 23%;
+                padding-top: 8px;
+                color: azure;
+                display: none;
+                   
+               }      
+        }
+    }
+    
+    .grid_index_elemento1:hover {
+        transform: scale(1.05);
+        
+        
+    }
+    
+    
+    
+    .grid_index_elemento2{
+        @include EstiloCuadros(url("../img/anm.jfif"));
+        grid-area: item2;
+        .grid_index_descuento {
+            background-color: none;
+            width: 250px;
+            height: 100%;
+            flex-direction: row;
+            .elemento-2_descuento--porcentaje {
+                background-color: #C70039;
+                width: 30%;
+                height: 23%;
+                padding-top: 8px;
+                color: azure;
+                display: none;
+                   
+               }      
+        }
+    }
+    
+    .grid_index_elemento2:hover {
+        transform: scale(1.05);
+        
+    }
+    
+    
+    
+    
+    
+    .index_iframe{
+         grid-area: item3;
+         display: none
+        
+    }
+    
+    
+    
+    .grid_index_elemento4 {
+        @include EstiloCuadros(url("../img/anm.jfif"));
+        grid-area: item4;
+        .grid_index_descuento {
+            background-color: none;
+            width: 250px;
+            height: 100%;
+            flex-direction: row;
+            .elemento-4_descuento--porcentaje {
+                background-color: #C70039;
+                width: 30%;
+                height: 23%;
+                padding-top: 8px;
+                color: azure;
+                display: none;
+                   
+               }      
+        }
+    
+    }
+    
+    .grid_index_elemento4:hover {
+        transform: scale(1.05);
+        
+    }
+    
+    
+    
+    
+    .grid_index_elemento5{
+    
+        @include EstiloCuadros(url("../img/anm.jfif"));
+        grid-area: item5;
+        .grid_index_descuento {
+            background-color: none;
+            width: 250px;
+            height: 100%;
+            flex-direction: row;
+            .elemento-5_descuento--porcentaje {
+                background-color: #C70039;
+                width: 30%;
+                height: 23%;
+                padding-top: 8px;
+                color: azure;
+                display: none;
+                   
+               }      
+        }
+    }
+    
+    .grid_index_elemento5:hover {
+        transform: scale(1.05);
+        
+    }
+    
+    .grid_index_elemento6{
+        @include EstiloCuadros(url("../img/anm.jfif"));
+        grid-area: item6;
+        .grid_index_descuento {
+            background-color: none;
+            width: 250px;
+            height: 100%;
+            flex-direction: row;
+            .elemento-6_descuento--porcentaje {
+                background-color: #C70039;
+                width: 30%;
+                height: 23%;
+                padding-top: 8px;
+                color: azure;
+                display: none;
+                   
+               }      
+        }
+    }
+    
+    .grid_index_elemento6:hover {
+        transform: scale(1.05);
+        
+    }
+    
+    .grid_index_elemento7{
+    
+        @include EstiloCuadros(url("../img/anm.jfif"));
+        grid-area: item7;
+        .grid_index_descuento {
+            background-color: none;
+            width: 250px;
+            height: 100%;
+            flex-direction: row;
+            .elemento-7_descuento--porcentaje {
+                background-color: #C70039;
+                width: 30%;
+                height: 23%;
+                padding-top: 8px;
+                color: azure;
+                display: none;
+                   
+               }      
+        }
+    }
+    
+    .grid_index_elemento7:hover {
+        transform: scale(1.05);
+        
+        
+    }
+    
+    
+    .infomain{
+        grid-area: item8;
+        display: none;
+        
+    }
+    
+    .index_direccion{
+        text-align: center;
+    }
+    
+    .index_footer {
+        background-color: #a00531;
+        height: 600px;
+        margin-top: 200px;
+        .mapa_index{
+            display: flex;
+            flex-direction: column;
+           
+            width: 100%;
+    
+            .mapa_index_ul{
+                text-align: center;
+                list-style-type: none;
+                padding: 30px;
+                .mapa_items--color{
+                    color: #eeeeee;
+                }
+            }
+        }
+    }
+     
+
+
+
+
+    
+
+}
+/*media queries */
+$ColorEx: rgb(1, 207, 104); 
+
+$ColorEx2:rgb(0, 165, 82);
+
+$ColorPs: rgb(0, 16, 241); 
+
+$ColorPs2:rgb(1, 3, 117);
+
+@media(max-width: 400px){
+
+    .index_iframe {
+        display: none;
+        
+    }
+
+    .menu  {
+
+        display: none;
+    }
+
+    .banner {
+        display: none;
+    }
+
+   
+    .titulo_index {
+        display: flex;
+        justify-content: center;
+        color: #a00531;
+        font-weight: bold;
+    }
+
+    .index_iframe_mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+        
+        
+        
+    }
+
+ .menu_mobile_ancla{
+     color: #f5f4f4;
+ }
+    #header{
+        width: 100%;
+        height: 250px;
+        
+        .menu_mobile_opciones{
+            width: 100%;
+            height: 250px;
+           
+
+            .opcion_inicio {
+                width: 100%;
+                height: 50px;
+                background-color: #C70039;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                
+            }
+            
+
+            .opcion_nintendo {
+                width: 100%;
+                height: 50px;
+                background-color: #eeeeee;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                
+            }
+
+            .opcion_xbox {
+                width: 100%;
+                height: 50px;
+                background-color:#86052a;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                
+            }
+
+            .opcion_ps {
+                width: 100%;
+                height: 50px;
+                background-color:#690421;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                
+            }
+
+            .opcion_accesorios {
+                width: 100%;
+                height: 50px;
+                background-color:#3d0313;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                
+            }
+        }
+
+
+    }
+        
+    
+/* aquí empieza la hoja de estilo de la página index */ 
+.grid_index{
+    
+
+    display: grid;
+    height: 140vh;
+    grid-gap: 20px;
+    justify-content: center;
+    
+    
+    
+    
+
+
+    grid-template-areas: 
+    "item1 "
+    "item2 "
+    "item4 ";
+
+    grid-template-columns: 250px;
+    grid-template-rows: none;
+}
+
+
+.grid_index > * {
+
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    
+}
+
+/* Cuadros - articulos */ 
+ 
+.grid_index-nombre{
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.grid_index_valor{
+    border: none;
+    
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+
+ 
+
+.videobor3{
+    width: 230px;
+    
+}
+
+
+
+@mixin EstiloCuadros ($imagen) {
+   
+    background-image: $imagen;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-right-radius:  10%;
+    }
+
+.grid_index_elemento1 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item1;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-1_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+.grid_index_elemento2{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item2;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+
+
+.index_iframe{
+     grid-area: item3;
+     display: none
+    
+}
+
+
+
+.grid_index_elemento4 {
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item4;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
 
 }
 
 
 
-    .navbar-toggler{
-        border: 3px solid $ColorTres;
-    }
-   
-    .container-fluid{
-        background-color: #ffae00;
-        
-    }
-    .navbar-toggler-icon {
-        border: none;
-    }
-
-    #header {
-        width: 100%;
-        background-color: #ffae00;
-        display: none;
-        
-    }
-    
-     
-
-    .nav_menu{
-        border: none;
-        
-        
-    }
-    
-    .nav_menu:hover {
-        
-        
-        background-color: $ColorTres;
-    }
-    
-    
-    .banner{
-        border: none;
-        width: 100%;
-        height: 200px;
-        
-        
-    }
-    
-    .carousel-inner {
-        height: 200px;
-    }
-    
-    #carouselExampleCaptions > * > div {
-     height: 200px;  
-    
-    }
-    
-    .menu{
-        border: none;
-        height: 70px;
-       
-        
-          
-    }
-    
-    .lista{
-        border: none;
-        display: none;
-        flex-direction:column;
-        list-style-type: none ;
-        width: 48%;
-        height: 70px;
-        
-    }
-    
-    
-    .menu > .lista > li{
-        padding: 20px;
-        height: 70px;
-        
-    }
-    
-    .menu > .lista > li > a {
-        color: aliceblue;
-        
-        border: none;
-        
-    }
-    
-    
-    .menu > .lista2 > li > a {
-        color: aliceblue;
-        
-    }
-    
-    
-    
-    .lista2{
-        border: none;
-        display: flex;
-        flex-direction: row;
-        width: 16%;
-        list-style-type: none;
-        height: 70px;
-        padding-top: 12px;
-        padding-left: 10px;
-        display: none;
-        
-    }
-    
-    .menu > .lista2 > li{
-        padding: 7px;
-    }
-    
-
-    .titulo_index {
-        color: #C70039;
-        
-    }
-        
-    .gridindex {
-    
-        background-color: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        margin-top: 50px;
-
-        @mixin EstiloCuadros ($imagen) {
-       
-            background-image: $imagen;
-            flex-direction: column;
-            justify-content: flex-end;
-            border-radius: 10%;
-            height: 250px;
-            }
 
 
-        
-        
 
-        .index_iframe {
-          
-        width: 70%;
-        .pipi {
-            height: 300px;
-        }
-        
-        }
-        .bor1 {
-            @include EstiloCuadros(url("../img/hk.jpg"));
-            
-        }
-        
-        .bor1:hover {
-            transform: scale(1.05);
-            
-            
-        }
-        
-        .bor2 {
-            @include EstiloCuadros(url("../img/hk.jpg"));
-            
-        }
-        
-        .bor2:hover {
-            transform: scale(1.05);
-            
-            
-        }
-        
-        
-        .bor4 {
-            @include EstiloCuadros(url("../img/anm.jfif"));
-            
-        
-        }
-        
-        .bor4:hover {
-            transform: scale(1.05);
-            
-        }
-        
-        
-        .bor5{
-            display: none;
-        }
-        .bor5:hover {
-            transform: scale(1.05);
-           
-            
-        }
-        
-        .bor6{
-            @include EstiloCuadros(url("../img/anm.jfif"));
-            display: none;
-            
-        }
-        
-        .bor6:hover {
-            transform: scale(1.05);
-            
-        }
-        
-        .bor7{
-        
-            @include EstiloCuadros(url("../img/anm.jfif"));
-            display: none;
-            
-        }
-        
-        .bor7:hover {
-            transform: scale(1.05);
-            
-        }
-        
-        
-      
-           
-        
-        
-    }
-    
-    /* Cuadros - articulos */ 
-     
-    .nombr1{
-        background-color: #C70039;
-        color: aliceblue;
-        width: 250px;
-        height: 30px;
-        justify-content: center;
-        
-    }
-    
-    
-    .nov1{
-        border: none;
-        
-        text-align: center;
-        background-color: hsl(343, 94%, 32%);
-        width: 250px;
-        height: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: rgb(255, 255, 255);
-    
-              
-    }
-    
-    
-    .descuento1{
+.grid_index_elemento5{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item5;
+    display: none;
+    .grid_index_descuento {
         background-color: none;
         width: 250px;
         height: 100%;
         flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_index_elemento5:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_index_elemento6{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item6;
+    display: none;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-6_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_index_elemento6:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_index_elemento7{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item7;
+    display: none;
+    .grid_index_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_index_elemento7:hover {
+    transform: scale(1.05);
+    
+    
+}
+
+
+.infomain{
+    grid-area: item8;
+    display: none;
+    
+}
+
+ 
+.index_direccion{
+    text-align: center;
+    color: #eeeeee;
+}
+
+.index_footer {
+    background-color: #a00531;
+    height: 600px;
+    .mapa_index{
+        display: flex;
+        flex-direction: column;
+       
+        width: 100%;
+
+        .mapa_index_ul{
+            text-align: center;
+            list-style-type: none;
+            padding: 30px;
+            .mapa_items--color{
+                color: #eeeeee;
+            }
+        }
+    }
+}
+
+
+/* aquí empieza la hoja de estilo de la página nintendo */ 
+
+
+.titulo_nintendo{
+    text-align: center;
+    color: #C70039;
+}
+
+.grid_nintendo {
+    display: none;
+}
+
+.grid_nintendo_mobile{
+    
+
+    display: grid;
+    height: 140vh;
+    grid-gap: 20px;
+    justify-content: center;
+    
+    
+    
+    
+
+
+    grid-template-areas: 
+    "item1 "
+    "item2 "
+    "item4 ";
+
+    grid-template-columns: 250px;
+    grid-template-rows: none;
+}
+
+
+.grid_nintendo_mobile > * {
+
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    
+}
+
+/* Cuadros - articulos */ 
+ 
+.grid_nintendo-nombre{
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.grid_nintendo_valor{
+    border: none;
+    
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
           
-    }
-        
+}
+
+
+ 
+
+.videobor3{
+    width: 230px;
     
-     .descestyle{
-         background-color: #C70039;
-         width: 30%;
-         height: 23%;
-         padding-top: 8px;
-         color: azure;
-         
-     }    
-     
-     
-    
-    .videobor3{
-        width: 70%;
-        
-    }
-    
-    
-    
+}
+
+
+
+@mixin EstiloCuadros ($imagen) {
    
-    
-    
-        
+    background-image: $imagen;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-right-radius:  10%;
     }
+
+.grid_nintendo_elemento1 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item1;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-1_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+.grid_nintendo_elemento2{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item2;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+
+
+.nintendo_iframe{
+     grid-area: item3;
+     display: none
+    
+}
+
+
+
+.grid_nintendo_elemento4 {
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item4;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+
+}
+
+
+
+
+
+
+.grid_nintendo_elemento5{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item5;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_nintendo_elemento5:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_nintendo_elemento6{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item6;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-6_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_nintendo_elemento6:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_nintendo_elemento7{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item7;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_nintendo_elemento7:hover {
+    transform: scale(1.05);
     
     
+}
+
+
+.infomain{
+    grid-area: item8;
+    display: none;
+    
+}
+
+ 
+.nintendo_direccion{
+    text-align: center;
+    color: #eeeeee;
+}
+
+.nintendo_footer {
+    background-color: #a00531;
+    height: 600px;
+    .mapa_nintendo{
+        display: flex;
+        flex-direction: column;
+       
+        width: 100%;
+
+        .mapa_nintendo_ul{
+            text-align: center;
+            list-style-type: none;
+            padding: 30px;
+            .mapa_items--color{
+                color: #eeeeee;
+            }
+        }
+    }
+}
+
+/* aquí empieza la hoja de estilo de la página xbox */ 
+
+.grid_xbox{
+    display: none;
+}
+.titulo_xbox{
+    text-align: center;
+    color: #C70039;
+}
+
+.grid_xbox {
+    display: none;
+}
+
+.grid_xbox_mobile{
+    
+
+    display: grid;
+    height: 140vh;
+    grid-gap: 20px;
+    justify-content: center;
+    
+    
+    
+    
+
+
+    grid-template-areas: 
+    "item1 "
+    "item2 "
+    "item4 ";
+
+    grid-template-columns: 250px;
+    grid-template-rows: none;
+}
+
+
+.grid_xbox_mobile > * {
+
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    
+}
+
+/* Cuadros - articulos */ 
+ 
+.grid_xbox-nombre{
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.grid_xbox_valor{
+    border: none;
+    
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+
+ 
+
+.videobor3{
+    width: 230px;
+    
+}
+
+
+
+@mixin EstiloCuadros ($imagen) {
    
+    background-image: $imagen;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-right-radius:  10%;
+    }
+
+.grid_xbox_elemento1 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item1;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-1_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
 
 
 
 
+
+.grid_xbox_elemento2{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item2;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+
+
+.xbox_iframe{
+     grid-area: item3;
+     display: none
+    
+}
+
+
+
+.grid_xbox_elemento4 {
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item4;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+
+}
+
+
+
+
+
+
+.grid_xbox_elemento5{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item5;
+    display: none;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_xbox_elemento5:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_xbox_elemento6{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item6;
+    display: none;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-6_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_xbox_elemento6:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_xbox_elemento7{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item7;
+    display: none;
+    .grid_xbox_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_xbox_elemento7:hover {
+    transform: scale(1.05);
+    
+    
+}
+
+
+.infomain{
+    grid-area: item8;
+    display: none;
+    
+}
+
+ 
+.xbox_direccion{
+    text-align: center;
+    color: #eeeeee;
+}
+
+.xbox_footer {
+    background-color: #a00531;
+    height: 600px;
+    .mapa_xbox{
+        display: flex;
+        flex-direction: column;
+       
+        width: 100%;
+
+        .mapa_xbox_ul{
+            text-align: center;
+            list-style-type: none;
+            padding: 30px;
+            .mapa_items--color{
+                color: #eeeeee;
+            }
+        }
+    }
+}
+
+
+/* aquí empieza la hoja de estilo de la página ps */ 
+
+.grid_ps{
+    display: none;
+}
+
+.titulo_ps{
+    text-align: center;
+    color: #C70039;
+}
+
+.grid_ps {
+    display: none;
+}
+
+.grid_ps_mobile{
+    
+
+    display: grid;
+    height: 140vh;
+    grid-gap: 20px;
+    justify-content: center;
+    
+    
+    
+    
+
+
+    grid-template-areas: 
+    "item1 "
+    "item2 "
+    "item4 ";
+
+    grid-template-columns: 250px;
+    grid-template-rows: none;
+}
+
+
+.grid_ps_mobile > * {
+
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    
+}
+
+/* Cuadros - articulos */ 
+ 
+.grid_ps-nombre{
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.grid_ps_valor{
+    border: none;
+    
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+
+ 
+
+.videobor3{
+    width: 230px;
+    
+}
+
+
+
+@mixin EstiloCuadros ($imagen) {
+   
+    background-image: $imagen;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-right-radius:  10%;
+    }
+
+.grid_ps_elemento1 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item1;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-1_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+.grid_ps_elemento2{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item2;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+
+
+.ps_iframe{
+     grid-area: item3;
+     display: none
+    
+}
+
+
+
+.grid_ps_elemento4 {
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item4;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+
+}
+
+
+
+
+
+
+.grid_ps_elemento5{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item5;
+    display: none;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_ps_elemento5:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_ps_elemento6{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item6;
+    display: none;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-6_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_ps_elemento6:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_ps_elemento7{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item7;
+    display: none;
+    .grid_ps_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_ps_elemento7:hover {
+    transform: scale(1.05);
+    
+    
+}
+
+
+.infomain{
+    grid-area: item8;
+    display: none;
+    
+}
+
+ 
+.ps_direccion{
+    text-align: center;
+    color: #eeeeee;
+}
+
+.ps_footer {
+    background-color: #a00531;
+    height: 600px;
+    .mapa_ps{
+        display: flex;
+        flex-direction: column;
+       
+        width: 100%;
+
+        .mapa_ps_ul{
+            text-align: center;
+            list-style-type: none;
+            padding: 30px;
+            .mapa_items--color{
+                color: #eeeeee;
+            }
+        }
+    }
+}
+
+
+
+
+/* aquí empieza la hoja de estilo de la página accesorios */ 
+
+.grid_accesorios{
+    display: none;
+}
+
+.grid_accesorios_mobile{
+    
+
+    display: grid;
+    height: 140vh;
+    grid-gap: 20px;
+    justify-content: center;
+    
+    
+    
+    
+
+
+    grid-template-areas: 
+    "item1 "
+    "item2 "
+    "item4 ";
+
+    grid-template-columns: 250px;
+    grid-template-rows: none;
+}
+
+
+.grid_accesorios_mobile > * {
+
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    
+}
+
+/* Cuadros - articulos */ 
+ 
+.grid_accesorios-nombre{
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+
+.grid_accesorios_valor{
+    border: none;
+    
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+          
+}
+
+
+ 
+
+.videobor3{
+    width: 230px;
+    
+}
+
+
+
+@mixin EstiloCuadros ($imagen) {
+   
+    background-image: $imagen;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top-right-radius:  10%;
+    }
+
+.grid_accesorios_elemento1 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item1;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-1_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+.grid_accesorios_elemento2{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item2;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+
+
+
+
+
+
+.accesorios_iframe{
+     grid-area: item3;
+     display: none
+    
+}
+
+
+
+.grid_accesorios_elemento4 {
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item4;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+
+}
+
+
+
+
+
+
+.grid_accesorios_elemento5{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item5;
+    display: none;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_accesorios_elemento5:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_accesorios_elemento6{
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item6;
+    display: none;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-6_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_accesorios_elemento6:hover {
+    transform: scale(1.05);
+    
+}
+
+.grid_accesorios_elemento7{
+
+    @include EstiloCuadros(url("../img/anm.jfif"));
+    grid-area: item7;
+    display: none;
+    .grid_accesorios_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+}
+
+.grid_accesorios_elemento7:hover {
+    transform: scale(1.05);
+    
+    
+}
+
+
+.infomain{
+    grid-area: item8;
+    display: none;
+    
+}
+
+ 
+.accesorios_direccion{
+    text-align: center;
+    color: #eeeeee;
+}
+
+.accesorios_footer {
+    background-color: #a00531;
+    height: 600px;
+    .mapa_accesorios{
+        display: flex;
+        flex-direction: column;
+       
+        width: 100%;
+
+        .mapa_accesorios_ul{
+            text-align: center;
+            list-style-type: none;
+            padding: 30px;
+            .mapa_items--color{
+                color: #eeeeee;
+            }
+        }
+    }
+}
+
+}
+
+    
 
