@@ -26,7 +26,8 @@
   .nav_menu:hover {
     background-color: #a00531; }
   .titulo_nintendo {
-    text-align: center; }
+    text-align: center;
+    margin-top: 20px; }
   .banner {
     border: none;
     width: 100%;
@@ -97,6 +98,12 @@
     text-align: center;
     font-weight: bolder;
     color: #504f4f; }
+  .titulo_index {
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: #86052a;
+    color: #eeeeee;
+    font-weight: lighter; }
   /* aquí empieza la hoja de estilo de la página index */
   .grid_index, .grid_nintendo, .grid_xbox, .grid_ps, .grid_accesorios {
     display: grid;
@@ -129,8 +136,6 @@
     flex-direction: column;
     justify-content: center;
     color: white; }
-  .videobor3 {
-    width: 230px; }
   .grid_index_elemento1 {
     background-image: url("../img/hk.jpg");
     flex-direction: column;
@@ -172,7 +177,8 @@
   .grid_index_elemento2:hover {
     transform: scale(1.05); }
   .index_iframe {
-    grid-area: item3; }
+    grid-area: item3;
+    background-color: #f3f3f3; }
   .grid_index_elemento4 {
     background-image: url("../img/anm.jfif");
     flex-direction: column;
@@ -3078,3 +3084,34 @@
         padding: 30px; }
         .accesorios_footer .mapa_accesorios .mapa_accesorios_ul .mapa_items--color {
           color: #eeeeee; } }
+
+.map-container-6 {
+  margin-right: 100px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-container-6 iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+.section {
+  background-color: #c9c9c9; }
+  .section .card {
+    margin-left: 100px;
+    height: 600px; }
+    .section .card .card-body {
+      margin-left: 50px;
+      margin-right: 50px; }
+
+.text-center {
+  margin-right: 100px; }
+
+.col-md-4 {
+  border-right: solid 2px #a00531;
+  font-size: small;
+  padding: 10px; }
