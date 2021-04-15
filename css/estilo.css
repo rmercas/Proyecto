@@ -48,6 +48,9 @@
     list-style-type: none;
     width: 48%;
     height: 70px; }
+  .menu_index_logo {
+    margin-right: 250px;
+    padding-top: 8px; }
   .menu > .lista > li {
     padding: 20px;
     height: 70px; }
@@ -3112,6 +3115,9 @@
   margin-right: 100px; }
 
 .col-md-4 {
-  border-right: solid 2px #a00531;
+  border-right: solid 2px #b1b1b1;
   font-size: small;
   padding: 10px; }
+
+.btn-light-blue {
+  margin-left: 100px; }

@@ -46,6 +46,7 @@
 
 
     <nav class="menu">
+      <div class="menu_index_logo"> <a href="../index.html"><img src="../img/logo_tienda.png" class="d-block w-100" alt="bq gamer logo"></div></a>
       <ul class="lista">
         <!--lista desordenada-->
         <li class="lil"><a href="../index.html">Inicio</a></li>
@@ -373,82 +374,110 @@
 
 
   <footer>
-    <div class="stylef">
-      <section>
-        <div>
-          <h2 class="contacto">Contacto</h2>
+    <!--Section: Contact v.1-->
+  <section class="section pb-5">
+  
+    <!--Section heading-->
+    <h2 class="section-heading h1 pt-4"></h2>
+    <!--Section description-->
+    <p class="section-description pb-4"></p>
+  
+    <div class="row">
+  
+      <!--Grid column-->
+      <div class="col-lg-5 mb-4">
+  
+        <!--Form with header-->
+        <div class="card">
+  
+          <div class="card-body">
+            <!--Header-->
+            <div class="form-header blue accent-1">
+              <h3><i class="fas fa-envelope"></i> Escríbenos:</h3>
+            </div>
+  
+            <p>Déjanos tus datos y nos pondremos en contacto</p>
+            <br>
+  
+            <!--Body-->
+            <div class="md-form">
+              <i class="fas fa-user prefix grey-text"></i>
+              <input type="text" id="form-name" class="form-control">
+              <label for="form-name">Nombre</label>
+            </div>
+  
+            <div class="md-form">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <input type="text" id="form-email" class="form-control">
+              <label for="form-email">Correo electrónico</label>
+            </div>
+  
+            <div class="md-form">
+              <i class="fas fa-tag prefix grey-text"></i>
+              <input type="text" id="form-Subject" class="form-control">
+              <label for="form-Subject">Déjanos un mensaje!!!</label>
+            </div>
+  
+            <div class="md-form">
+              <i class="fas fa-pencil-alt prefix grey-text"></i>
+              <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+              <label for="form-text"></label>
+            </div>
+  
+            <div class="text-center mt-4">
+              <button class="btn btn-light-blue">Enviar</button>
+            </div>
+  
+          </div>
+  
         </div>
-        <form class="row g-3 needs-validation" novalidate>
+        <!--Form with header-->
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-lg-7">
+  
+        <!--Google map-->
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d692.3006872293503!2d-74.86760642623621!3d11.020365461326767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d24e1362ab1%3A0xab78cc9cb34238d1!2sConjunto%20Residencial%20Plazuela%20del%20Mar!5e0!3m2!1ses!2sco!4v1618459449940!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+  
+        <br>
+        <!--Buttons-->
+        <div class="row text-center">
           <div class="col-md-4">
-            <label for="validationCustom01" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="validationCustom01" value="" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
+            <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+            <p>Barranquilla, Atlántico</p>
+            <p>Colombia</p>
           </div>
+  
           <div class="col-md-4">
-            <label for="validationCustom02" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="validationCustom02" value="" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
+            <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+            <p>+ 57 234 567 89</p>
+            <p>Lunes - Viernes, 9:00 a.m.- <br>
+              18:00 p.m.</p>
           </div>
+  
           <div class="col-md-4">
-            <div class="input-group has-validation">
-              <div class="invalid-feedback">
-
-              </div>
-            </div>
+            <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+            <p>bqgaming@gmail.com</p>
+            <p>ventasbqgaming@gmail.com</p>
           </div>
-          <div class="col-md-6">
-            <label for="validationCustom03" class="form-label">Ciudad</label>
-            <input type="text" class="form-control" id="validationCustom03" required>
-            <div class="invalid-feedback">
-              Por favor elige una ciudad.
-            </div>
-          </div>
-          <div class="col-md-3">
-            <label for="validationCustom04" class="form-label">Departamento</label>
-            <select class="form-select" id="validationCustom04" required>
-              <option selected disabled value=""></option>
-              <option>Atlántico</option>
-              <option>Antioquia</option>
-            </select>
-            <div class="invalid-feedback">
-              Por favor elige un departamento.
-            </div>
-          </div>
-          <div class="col-md-3">
-
-            <div class="invalid-feedback">
-
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Deja tu mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <div class="invalid-feedback">
-              </div>
-
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">Enviar</button>
-              </div>
-        </form>
-      </section>
-      <section></section>
-      <section class="direccion">
-        <h2>Dirección</h2>
-        <p>Calle 3B # Tranv 3B - 311 <br>
-          Local 105 Centro Comercial Lechamp <br>
-          Barrio Villa Campestre</p>
-        
-      </section>
+        </div>
+  
+      </div>
+      <!--Grid column-->
+  
     </div>
-
-  </footer>
+  
+  </section>
+  <!--Section: Contact v.1-->
+  
+    </footer>
+  
+  
 
 
 
