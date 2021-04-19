@@ -1,4 +1,11 @@
 @charset "UTF-8";
+footer {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px; }
+  footer .pb-5 {
+    background-color: #f5f4f4; }
+
 /*Variables*/
 * > html {
   padding: 0%;
