@@ -545,29 +545,16 @@ $xboxcolor: rgb(0, 180, 0);
 /* Cuadros - articulos */ 
  
 .grid_index-nombre{
+    display: flex;
+    flex-direction: column;
     background-color: #C70039;
     color: aliceblue;
     width: 250px;
-    height: 30px;
-    justify-content: center;
-    
-}
-
-
-.grid_index_valor{
-    border: none;
-    
-    text-align: center;
-    background-color: #a00531;
-    width: 250px;
     height: 50px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    color: rgb(255, 255, 255);
-
-          
+    
 }
+
 
 
  
@@ -583,23 +570,9 @@ $xboxcolor: rgb(0, 180, 0);
     }
 
 .grid_index_elemento1 {
-    @include EstiloCuadros(url("../img/hk.jpg"));
+    @include EstiloCuadros(url("../img/super-mario-3d-world-bowsers-fury.jpg"));
     grid-area: item1;
-    .grid_index_descuento {
-        background-color: none;
-        width: 250px;
-        height: 100%;
-        flex-direction: row;
-        .elemento-1_descuento--porcentaje {
-            background-color: #C70039;
-            width: 30%;
-            height: 23%;
-            padding-top: 8px;
-            color: azure;
-            display: none;
-               
-           }      
-    }
+    
 }
 
 .grid_index_elemento1:hover {
@@ -611,23 +584,9 @@ $xboxcolor: rgb(0, 180, 0);
 
 
 .grid_index_elemento2{
-    @include EstiloCuadros(url("../img/anm.jfif"));
+    @include EstiloCuadros(url("../img/rse_village_miniatura.png"));
     grid-area: item2;
-    .grid_index_descuento {
-        background-color: none;
-        width: 250px;
-        height: 100%;
-        flex-direction: row;
-        .elemento-2_descuento--porcentaje {
-            background-color: #C70039;
-            width: 30%;
-            height: 23%;
-            padding-top: 8px;
-            color: azure;
-            display: none;
-               
-           }      
-    }
+    
 }
 
 .grid_index_elemento2:hover {
@@ -648,23 +607,9 @@ $xboxcolor: rgb(0, 180, 0);
 
 
 .grid_index_elemento4 {
-    @include EstiloCuadros(url("../img/anm.jfif"));
+    @include EstiloCuadros(url("../img/outraiders_miniatura.png"));
     grid-area: item4;
-    .grid_index_descuento {
-        background-color: none;
-        width: 250px;
-        height: 100%;
-        flex-direction: row;
-        .elemento-4_descuento--porcentaje {
-            background-color: #C70039;
-            width: 30%;
-            height: 23%;
-            padding-top: 8px;
-            color: azure;
-            display: none;
-               
-           }      
-    }
+   
 
 }
 
@@ -678,23 +623,9 @@ $xboxcolor: rgb(0, 180, 0);
 
 .grid_index_elemento5{
 
-    @include EstiloCuadros(url("../img/anm.jfif"));
+    @include EstiloCuadros(url("../img/xenoblade.jpg"));
     grid-area: item5;
-    .grid_index_descuento {
-        background-color: none;
-        width: 250px;
-        height: 100%;
-        flex-direction: row;
-        .elemento-5_descuento--porcentaje {
-            background-color: #C70039;
-            width: 30%;
-            height: 23%;
-            padding-top: 8px;
-            color: azure;
-            display: none;
-               
-           }      
-    }
+    
 }
 
 .grid_index_elemento5:hover {
@@ -703,23 +634,9 @@ $xboxcolor: rgb(0, 180, 0);
 }
 
 .grid_index_elemento6{
-    @include EstiloCuadros(url("../img/anm.jfif"));
+    @include EstiloCuadros(url("../img/ps-5_miniatura_index.png"));
     grid-area: item6;
-    .grid_index_descuento {
-        background-color: none;
-        width: 250px;
-        height: 100%;
-        flex-direction: row;
-        .elemento-6_descuento--porcentaje {
-            background-color: #C70039;
-            width: 30%;
-            height: 23%;
-            padding-top: 8px;
-            color: azure;
-            display: none;
-               
-           }      
-    }
+   
 }
 
 .grid_index_elemento6:hover {
@@ -729,7 +646,7 @@ $xboxcolor: rgb(0, 180, 0);
 
 .grid_index_elemento7{
 
-    @include EstiloCuadros(url("../img/anm.jfif"));
+    @include EstiloCuadros(url("../img/xbox-s-x_miniatura.png"));
     grid-area: item7;
     .grid_index_descuento {
         background-color: none;
@@ -3259,9 +3176,10 @@ $xboxcolor: rgb(0, 180, 0);
     background-color: #C70039;
     color: aliceblue;
     width: 250px;
-    height: 30px;
+    height: 50px;
     justify-content: center;
-    
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -3300,23 +3218,9 @@ $xboxcolor: rgb(0, 180, 0);
     }
 
     .grid_index_elemento1 {
-        @include EstiloCuadros(url("../img/hk.jpg"));
+        @include EstiloCuadros(url("../img/super-mario-3d-world-bowsers-fury.jpg"));
         grid-area: item1;
-        .grid_index_descuento {
-            background-color: none;
-            width: 250px;
-            height: 100%;
-            flex-direction: row;
-            .elemento-1_descuento--porcentaje {
-                background-color: #C70039;
-                width: 30%;
-                height: 23%;
-                padding-top: 8px;
-                color: azure;
-                display: none;
-                   
-               }      
-        }
+       
     }
     
     .grid_index_elemento1:hover {
@@ -3328,23 +3232,9 @@ $xboxcolor: rgb(0, 180, 0);
     
     
     .grid_index_elemento2{
-        @include EstiloCuadros(url("../img/anm.jfif"));
+        @include EstiloCuadros(url("../img/rse_village_miniatura.png"));
         grid-area: item2;
-        .grid_index_descuento {
-            background-color: none;
-            width: 250px;
-            height: 100%;
-            flex-direction: row;
-            .elemento-2_descuento--porcentaje {
-                background-color: #C70039;
-                width: 30%;
-                height: 23%;
-                padding-top: 8px;
-                color: azure;
-                display: none;
-                   
-               }      
-        }
+       
     }
     
     .grid_index_elemento2:hover {
@@ -3365,23 +3255,9 @@ $xboxcolor: rgb(0, 180, 0);
     
     
     .grid_index_elemento4 {
-        @include EstiloCuadros(url("../img/anm.jfif"));
+        @include EstiloCuadros(url("../img/outraiders_miniatura.png"));
         grid-area: item4;
-        .grid_index_descuento {
-            background-color: none;
-            width: 250px;
-            height: 100%;
-            flex-direction: row;
-            .elemento-4_descuento--porcentaje {
-                background-color: #C70039;
-                width: 30%;
-                height: 23%;
-                padding-top: 8px;
-                color: azure;
-                display: none;
-                   
-               }      
-        }
+        
     
     }
     
@@ -3395,23 +3271,9 @@ $xboxcolor: rgb(0, 180, 0);
     
     .grid_index_elemento5{
     
-        @include EstiloCuadros(url("../img/anm.jfif"));
+        @include EstiloCuadros(url("../img/xenoblade.jpg"));
         grid-area: item5;
-        .grid_index_descuento {
-            background-color: none;
-            width: 250px;
-            height: 100%;
-            flex-direction: row;
-            .elemento-5_descuento--porcentaje {
-                background-color: #C70039;
-                width: 30%;
-                height: 23%;
-                padding-top: 8px;
-                color: azure;
-                display: none;
-                   
-               }      
-        }
+        
     }
     
     .grid_index_elemento5:hover {
@@ -3420,23 +3282,9 @@ $xboxcolor: rgb(0, 180, 0);
     }
     
     .grid_index_elemento6{
-        @include EstiloCuadros(url("../img/anm.jfif"));
+        @include EstiloCuadros(url("../img/ps-5_miniatura_index.png"));
         grid-area: item6;
-        .grid_index_descuento {
-            background-color: none;
-            width: 250px;
-            height: 100%;
-            flex-direction: row;
-            .elemento-6_descuento--porcentaje {
-                background-color: #C70039;
-                width: 30%;
-                height: 23%;
-                padding-top: 8px;
-                color: azure;
-                display: none;
-                   
-               }      
-        }
+       
     }
     
     .grid_index_elemento6:hover {
@@ -3446,23 +3294,9 @@ $xboxcolor: rgb(0, 180, 0);
     
     .grid_index_elemento7{
     
-        @include EstiloCuadros(url("../img/anm.jfif"));
+        @include EstiloCuadros(url("../img/xbox-s-x_miniatura.png"));
         grid-area: item7;
-        .grid_index_descuento {
-            background-color: none;
-            width: 250px;
-            height: 100%;
-            flex-direction: row;
-            .elemento-7_descuento--porcentaje {
-                background-color: #C70039;
-                width: 30%;
-                height: 23%;
-                padding-top: 8px;
-                color: azure;
-                display: none;
-                   
-               }      
-        }
+       
     }
     
     .grid_index_elemento7:hover {
