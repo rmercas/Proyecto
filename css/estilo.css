@@ -1,26 +1,18 @@
 @charset "UTF-8";
-@media (min-width: 900px) {
-  /*Variables*/
-  * > html {
-    padding: 0%;
-    margin: 0%; }
-  * > body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f5f4f4; }
+/*Variables*/
+* > html {
+  padding: 0%;
+  margin: 0%; }
+
+* > body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f4f4; }
+
+@media (min-width: 1143px) {
   #header {
     width: 100%;
     border: none;
     background-color: #C70039; }
-  .index_iframe_mobile {
-    display: none; }
-  .grid_nintendo_mobile {
-    display: none; }
-  .menu_mobile_ancla {
-    display: none; }
-  .menu_mobile {
-    display: none; }
-  .accesorios_iframe_mobile {
-    display: none; }
   .nav_menu {
     border: none; }
   .nav_menu:hover {
@@ -46,11 +38,14 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    width: 48%;
+    width: 95%;
     height: 70px; }
   .menu_index_logo {
-    margin-right: 250px;
-    padding-top: 8px; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .menu_logo {
+    padding-right: 300px; }
   .menu > .lista > li {
     padding: 20px;
     height: 70px; }
@@ -71,7 +66,138 @@
   .menu > .lista2 > li {
     padding: 7px; }
   #horario {
-    color: #fd2146; }
+    color: #fd2146; } }
+
+@media (min-width: 500px) and (max-width: 1142px) {
+  #header {
+    width: 100%;
+    border: none;
+    background-color: #C70039; }
+  .nav_menu {
+    border: none; }
+  .nav_menu:hover {
+    background-color: #a00531; }
+  .titulo_nintendo {
+    text-align: center;
+    margin-top: 20px; }
+  .banner {
+    border: none;
+    width: 100%;
+    height: 300px; }
+  .carousel-inner {
+    height: 300px; }
+  #carouselExampleCaptions > * > div {
+    height: 300px; }
+  .menu {
+    border: none;
+    height: 70px;
+    display: flex; }
+  .lista {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 95%;
+    height: 70px; }
+  .menu_index_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .menu > .lista > li {
+    padding: 20px;
+    height: 70px; }
+  .menu > .lista > li > a {
+    color: aliceblue;
+    border: none; }
+  .menu > .lista2 > li > a {
+    color: aliceblue; }
+  .lista2 {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    list-style-type: none;
+    height: 70px;
+    padding-top: 12px;
+    padding-left: 10px;
+    display: none; }
+  .menu > .lista2 > li {
+    padding: 7px; }
+  #horario {
+    color: #fd2146; } }
+
+@media (min-width: 100px) and (max-width: 1224px) {
+  #header {
+    width: 100%;
+    border: none;
+    background-color: #C70039; }
+  .nav_menu {
+    border: none; }
+  .nav_menu:hover {
+    background-color: #a00531; }
+  .titulo_nintendo {
+    text-align: center; }
+  .banner {
+    border: none;
+    width: 100%; }
+  .label_h5--display-none {
+    display: none; }
+  .label_p--display-none {
+    display: none; }
+  .carousel-control-prev {
+    height: 300px; }
+  .carousel-control-next {
+    height: 300px; }
+  .menu {
+    border: none;
+    height: 70px;
+    display: flex; }
+  .lista {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    width: 95%;
+    height: 70px; }
+  .menu_index_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none; }
+  .menu > .lista > li {
+    padding: 20px;
+    height: 70px; }
+  .menu > .lista > li > a {
+    color: aliceblue;
+    border: none; }
+  .menu > .lista2 > li > a {
+    color: aliceblue; }
+  .lista2 {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    list-style-type: none;
+    height: 70px;
+    padding-top: 12px;
+    padding-left: 10px;
+    display: none; }
+  .menu > .lista2 > li {
+    padding: 7px; }
+  #horario {
+    color: #fd2146; } }
+
+@media (min-width: 1153px) and (max-width: 1900px) {
+  .index_iframe_mobile {
+    display: none; }
+  .grid_nintendo_mobile {
+    display: none; }
+  .menu_mobile_ancla {
+    display: none; }
+  .menu_mobile {
+    display: none; }
+  .accesorios_iframe_mobile {
+    display: none; }
   /* títulos aquí */
   .titulonin {
     font-weight: red;
@@ -1852,7 +1978,7 @@
           text-align: justify;
           font-size: 14px; } }
 
-@media (min-width: 401px) and (max-width: 899px) {
+@media (min-width: 501px) and (max-width: 1152px) {
   /*Variables*/
   * > html {
     padding: 0%;
@@ -1860,10 +1986,6 @@
   * > body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f5f4f4; }
-  #header {
-    width: 100%;
-    border: none;
-    background-color: #C70039; }
   .grid_nintendo_mobile {
     display: none; }
   .menu_mobile_ancla {
@@ -1875,54 +1997,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 35px; }
-  .nav_menu {
-    border: none; }
-  .nav_menu:hover {
-    background-color: #a00531; }
   .titulo_nintendo {
     text-align: center; }
-  .banner {
-    border: none;
-    width: 100%;
-    height: 600px; }
-  .carousel-inner {
-    height: 600px; }
-  #carouselExampleCaptions > * > div {
-    height: 600px; }
-  .menu {
-    border: none;
-    height: 70px;
-    display: flex;
-    justify-content: flex-end; }
-  .lista {
-    border: none;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    width: 48%;
-    height: 70px; }
-  .menu > .lista > li {
-    padding: 20px;
-    height: 70px; }
-  .menu > .lista > li > a {
-    color: aliceblue;
-    border: none; }
-  .menu > .lista2 > li > a {
-    color: aliceblue; }
-  .lista2 {
-    border: none;
-    display: flex;
-    flex-direction: row;
-    width: 16%;
-    list-style-type: none;
-    height: 70px;
-    padding-top: 12px;
-    padding-left: 10px;
-    display: none; }
-  .menu > .lista2 > li {
-    padding: 7px; }
-  #horario {
-    color: #fd2146; }
   /* títulos aquí */
   .titulonin {
     font-weight: red;
@@ -2131,7 +2207,7 @@
           color: #eeeeee; } }
 
 /*media queries */
-@media (max-width: 400px) {
+@media (min-width: 200px) and (max-width: 500px) {
   .index_iframe {
     display: none; }
   .menu {
@@ -2167,7 +2243,7 @@
       #header .menu_mobile_opciones .opcion_nintendo {
         width: 100%;
         height: 50px;
-        background-color: #eeeeee;
+        background-color: #a00531;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -3089,7 +3165,6 @@
           color: #eeeeee; } }
 
 .map-container-6 {
-  margin-right: 100px;
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
@@ -3104,20 +3179,3 @@
 
 .section {
   background-color: #c9c9c9; }
-  .section .card {
-    margin-left: 100px;
-    height: 600px; }
-    .section .card .card-body {
-      margin-left: 50px;
-      margin-right: 50px; }
-
-.text-center {
-  margin-right: 100px; }
-
-.col-md-4 {
-  border-right: solid 2px #b1b1b1;
-  font-size: small;
-  padding: 10px; }
-
-.btn-light-blue {
-  margin-left: 100px; }
