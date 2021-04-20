@@ -3006,7 +3006,14 @@ $ColorPs2:rgb(1, 3, 117);
 }
 
 
-
+footer{
+    margin-top: 250px;
+    margin-left: 100px;
+    margin-right: 100px;
+    .pb-5{
+        background-color:  #f5f4f4;
+    }
+}
 
 }
 
@@ -3312,38 +3319,558 @@ $xboxcolor: rgb(0, 180, 0);
         
     }
     
-    .index_direccion{
-        text-align: center;
-    }
+   
+
+/* aquí empieza la hoja de estilo de la página nintendo */ 
+
+
+.grid_nintendo_valor {
+    background-color: #C70039;
+    color: aliceblue;
+    width: 250px;
+    height: 30px;
+    justify-content: center;
     
-    .index_footer {
-        background-color: #a00531;
-        height: 600px;
-        margin-top: 200px;
-        .mapa_index{
-            display: flex;
-            flex-direction: column;
-           
-            width: 100%;
+}
+
+.grid_nintendo-nombre {
+    border: none;
+    text-align: center;
+    background-color: #a00531;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);         
+}
+
+
+.grid_nintendo{
+    border: none;
+  
     
-            .mapa_index_ul{
-                text-align: center;
-                list-style-type: none;
-                padding: 30px;
-                .mapa_items--color{
-                    color: #eeeeee;
-                }
-            }
-        }
-    }
-     
+    grid-template-areas: 
+    "item2 item3"
+    "item4 item5"
+    "item7 item8"
+    "item9 item9";
+
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 250px 250px 250px ;
+
+    
+}
 
 
 
 
+.grid_nintendo > * {
+
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center
     
 
 }
+
+.grid_nintendo
+
+.grid_nintendo_elemento-1 {
+   
+    grid-area: item9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+   
+
+    .elemento-1_consolas_titulo {
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        color: #474747;
+        
+         
+    }
+
+
+    
+
+
+    .elemento-1_consolas_articulo1 {
+       
+        height: 150px;
+        width: 40%;
+        margin: 15px;
+        .consolas_articulo1_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch_miniatura.png"));
+    
+            .consolas_articulo1_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+
+    }
+
+
+    .elemento-1_consolas_articulo2 {
+        
+        height: 150px;
+        width: 40%;
+        margin: 15px;
+        
+        .consolas_articulo2_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-AC_miniatura.png"));
+    
+            .consolas_articulo2_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .elemento-1_consolas_articulo3 {
+        
+        height: 150px;
+        width: 40%;
+        margin: 15px;
+        .consolas_articulo3_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/Nintendo-switch-Lite_miniatura.png"));
+    
+            .consolas_articulo3_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+    }
+    .elemento-1_consolas_articulo4 {
+        
+        height: 150px;
+        width: 40%;
+        margin: 15px;
+        .consolas_articulo4_contenedor {
+
+        
+            height: 150px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include EstiloCuadros(url("../img/SNES_miniatura.png"));
+    
+            .consolas_articulo4_precio {
+    
+                
+                height: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $ColorUno;
+                color: #f5f4f4;
+                font-size: small;
+                flex-direction: column;
+    
+                
+                
+                
+            }
+    
+        }
+        
+    }
+}
+
+.grid_nintendo_elemento-2 {
+    @include EstiloCuadros(url("../img/super-mario-3d-world-bowsers-fury.jpg"));
+    grid-area: item2;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-2_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }      
+    }
+    
+}
+.grid_nintendo_elemento-2:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_nintendo_elemento-3 {
+    @include EstiloCuadros(url("../img/animal-crossing-nh.jpg"));
+    grid-area: item3;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-3_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+    
+}
+
+.grid_nintendo_elemento-3:hover {
+    transform: scale(1.05)
+}
+
+.grid_nintendo_elemento-4 {
+    @include EstiloCuadros(url("../img/hk.jpg"));
+    grid-area: item4;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-4_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+
+}
+
+.grid_nintendo_elemento-4:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_nintendo_elemento-5 {
+    @include EstiloCuadros(url("../img/zelda-bow.jpg"));
+    grid-area: item5;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-5_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_nintendo_elemento-5:hover {
+    transform: scale(1.05)
+}
+
+
+
+
+
+.grid_nintendo_elemento-7 {
+    @include EstiloCuadros(url("../img/mario-odyssey.jpg"));
+    grid-area: item7;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-7_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+.grid_nintendo_elemento-7:hover {
+    transform: scale(1.05)
+}
+
+.grid_nintendo_elemento-8 {
+    @include EstiloCuadros(url("../img/ori.jpg"));
+    grid-area: item8;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-8_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+.grid_nintendo_elemento-8:hover {
+    transform: scale(1.05)
+}
+
+
+.grid_nintendo_elemento-9 {
+    @include EstiloCuadros(url("../img/xenoblade.jpg"));
+    grid-area: none;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-9_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+
+
+.grid_nintendo_elemento-10 {
+    @include EstiloCuadros(url("../img/Luigi's-Mansion-3.jpg"));
+    grid-area: item10;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-10_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+
+.grid_nintendo_elemento-11 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg.jpg"));
+    grid-area: item11;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-11_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+               
+           }
+          
+    }
+}
+
+
+.grid_nintendo_elemento-12 {
+    @include EstiloCuadros(url("../img/mario-kart-8-d.jpg"));
+    grid-area: item12;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-12_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+
+
+.grid_nintendo_elemento-13 {
+    @include EstiloCuadros(url("../img/Smash.jpg"));
+    grid-area: item13;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-13_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+
+
+.grid_nintendo_elemento-14 {
+    @include EstiloCuadros(url("../img/Octopath-Traveler.jpg"));
+    grid-area: item14;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-14_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+               
+           }
+          
+    }
+}
+
+
+
+.grid_nintendo_elemento-15 {
+    @include EstiloCuadros(url("../img/Hades.jpg"));
+    grid-area: item15;
+    display: none;
+    .grid_nintendo_descuento {
+        background-color: none;
+        width: 250px;
+        height: 100%;
+        flex-direction: row;
+        .elemento-15_descuento--porcentaje {
+            background-color: #C70039;
+            width: 30%;
+            height: 23%;
+            padding-top: 8px;
+            color: azure;
+            display: none;
+            
+               
+           }
+          
+    }
+}
+
+footer{
+    margin-top: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+    .pb-5{
+        background-color:  #f5f4f4;
+    }
+}
+
+}
+
+
 /*media queries */
 $ColorEx: rgb(1, 207, 104); 
 
